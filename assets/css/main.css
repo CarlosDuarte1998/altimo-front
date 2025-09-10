@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.dropdown-style-none {
+  border: none;
+  box-shadow: none;
+  
+}
+
+.container{
+ 
+  margin: 0 auto;
+ 
+}
+
+.bg-blue-900 {
+  background-color: rgb(0 62 113/var(--tw-bg-opacity,1));
+}
+
+.bg-blue-600 {
+  background-color: rgb(0 104 201/var(--tw-bg-opacity,1));
+}
+
+.tb_snap_btn_bg{
+  display: none;
+}
+
+.btn-menu-mobile{
+  border: 0px;
+  padding: 0px;
+  box-shadow: 0px;
+  --tw-ring-shadow:init;
+}
+.btn-menu-mobile li{
+  height: 1rem;
+  width: 1rem;
+}
+
+/* Mejoras de accesibilidad */
+
+/* Asegurar que todos los elementos interactivos tengan un tamaño mínimo de 44px */
+button, a[role="button"], input[type="button"], input[type="submit"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Mejorar el foco visible para todos los elementos interactivos */
+button:focus-visible, 
+a:focus-visible, 
+input:focus-visible, 
+select:focus-visible, 
+textarea:focus-visible {
+  outline: 2px solid #0068c9;
+  outline-offset: 2px;
+}
+
+/* Mejorar contraste para el texto azul claro */
+.text-blue-100 {
+  color: #e6f3ff !important;
+}
+
+/* Asegurar suficiente contraste en enlaces de hover */
+.hover\:text-blue-600:hover {
+  color: #0068c9 !important;
+}
+
+/* Skip link para navegación por teclado */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
