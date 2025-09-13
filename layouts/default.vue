@@ -26,14 +26,14 @@ useHead({
       <!-- Skip navigation link -->
       <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
       
-      <div class="py-1 bg-[#3d78bc] text-center text-white">
+      <div class="py-1 bg-[#63CFE3] text-center text-white">
         <div class="container flex items-center justify-between px-4 md:px-6 max-w-[1380px] mx-auto">
           <div>
             <a href="https://www.google.com/maps/place/CIMRO/@13.980591,-89.556548,2188m/data=!3m1!1e3!4m6!3m5!1s0x8f62e8985656487b:0x58c9970ccf7141de!8m2!3d13.9805909!4d-89.5565483!16s%2Fg%2F11c54f45mc?hl=es&entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
                class="sm:px-3 hidden sm:flex justify-center gap-1 items-center px-2 text-sm font-medium" 
                target="_blank" 
                rel="noopener noreferrer"
-               aria-label="Ver ubicación de CIMRO Centro de Imágenes Radiológicas de Occidente en Google Maps">
+               aria-label="Ver ubicación de ALTIMO - Medical Center en Google Maps">
               <UIcon name="i-flowbite-map-pin-alt-solid" class="size-5" aria-hidden="true" />
               {{ corporateInfo.location }}
             </a>
@@ -43,28 +43,28 @@ useHead({
                v-if="socialMediaLinks.facebook" 
                target="_blank" 
                rel="noopener noreferrer"
-               aria-label="Seguir a CIMRO en Facebook">
+               aria-label="Seguir a ALTIMO en Facebook">
               <UIcon name="i-flowbite-facebook-solid" class="size-5" aria-hidden="true" />
             </a>
             <a :href="socialMediaLinks.instagram" 
                v-if="socialMediaLinks.instagram" 
                target="_blank" 
                rel="noopener noreferrer"
-               aria-label="Seguir a CIMRO en Instagram">
+               aria-label="Seguir a ALTIMO en Instagram">
               <UIcon name="i-flowbite-instagram-solid" class="size-5" aria-hidden="true" />
             </a>
             <a :href="socialMediaLinks.twitter" 
                v-if="socialMediaLinks.twitter" 
                target="_blank" 
                rel="noopener noreferrer"
-               aria-label="Seguir a CIMRO en Twitter">
+               aria-label="Seguir a ALTIMO en Twitter">
               <UIcon name="i-flowbite-twitter-solid" class="size-5" aria-hidden="true" />
             </a>
             <a :href="socialMediaLinks.youtube" 
                v-if="socialMediaLinks.youtube" 
                target="_blank" 
                rel="noopener noreferrer"
-               aria-label="Suscribirse al canal de YouTube de CIMRO">
+               aria-label="Suscribirse al canal de YouTube de ALTIMO">
               <UIcon name="i-flowbite-youtube-solid" class="size-5" aria-hidden="true" />
             </a>
             <a :href="`tel:${socialMediaLinks.contact}`" 
@@ -72,7 +72,7 @@ useHead({
                class="ml-2" 
                target="_blank" 
                rel="noopener noreferrer"
-               :aria-label="`Llamar a CIMRO al ${socialMediaLinks.contact}`">
+               :aria-label="`Llamar a ALTIMO al ${socialMediaLinks.contact}`">
               <UIcon name="i-flowbite-phone-solid" class="size-5" aria-hidden="true" />
             </a>
             <a :href="`mailto:${socialMediaLinks.email}`" 
@@ -80,7 +80,7 @@ useHead({
                class="ml-2" 
                target="_blank" 
                rel="noopener noreferrer"
-               :aria-label="`Enviar correo a CIMRO a ${socialMediaLinks.email}`">
+               :aria-label="`Enviar correo a ALTIMO a ${socialMediaLinks.email}`">
               <UIcon name="i-flowbite-envelope-solid" class="size-5" aria-hidden="true" />
             </a>
           </div>
