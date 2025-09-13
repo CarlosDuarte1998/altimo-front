@@ -34,7 +34,7 @@ const handleLogoClick = () => {
     <div class="container flex sm:h-23 items-center justify-between py-4 px-5 md:px-6 max-w-[1380px] mx-auto">
         <a class="flex items-center gap-2" href="/" aria-label="CIMRO - Centro de Imágenes Radiológicas de Occidente, ir al inicio" @click="handleLogoClick">
             <img alt="CIMRO - Centro de Imágenes Radiológicas de Occidente Santa Ana" width="140" height="60" decoding="async" data-nimg="1" class="h-12 sm:h-16 w-auto"
-                style="color:transparent" src="/logo-horizontal.png">
+                style="color:transparent" src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Logoaltimo.png">
         </a>
         <nav class="hidden lg:flex md:gap-6 lg:gap-10" role="navigation" aria-label="Navegación principal">
             <div class="flex items-center gap-6 lg:gap-8">
@@ -115,7 +115,7 @@ const handleLogoClick = () => {
                             
                         </nav>
                         <div class="p-4 text-center text-gray-700">
-                            <img src="/logo-horizontal.png" alt="Logo CIMRO" srcset="" class="mx-auto mb-4 h-12 w-auto" loading="lazy" 
+                            <img src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Logoaltimo.png" alt="Logo ALTIMO" srcset="" class="mx-auto mb-4 h-12 w-auto" loading="lazy" 
                             height="60" width="140">
                             
                         </div>

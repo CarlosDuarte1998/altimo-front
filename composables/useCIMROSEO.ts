@@ -1,19 +1,19 @@
 export const useCIMROSEO = () => {
   // Información corporativa de CIMRO
   const corporateInfo = {
-    name: 'CIMRO - Centro de Imágenes Radiológicas de Occidente',
-    shortName: 'CIMRO',
+    name: 'ALTIMO - MEDICAL CENTER',
+    shortName: 'ALTIMO',
     location: 'Santa Ana, El Salvador',
-    address: '5A Avenida Sur, entre 25 y 27 calle oriente, Urb San Miguelito, Santa Ana',
+    address: 'Entre, 23 Calle Oriente, Avenida Independencia Sur, Santa Ana CP 2201',
     phone: '+503 2484-5500',
     email: 'comercializacioncimro@gmail.com',
     whatsapp: '+503 7746-1474',
-    website: 'https://cimro.com.sv'
+    website: 'altimosv.com'
   };
 
   // Palabras clave SEO principales
   const mainKeywords = [
-    'CIMRO',
+    'ALTIMO',
     'Centro de Imágenes Radiológicas de Occidente',
     'Santa Ana',
     'tomografía computarizada Santa Ana',
@@ -117,8 +117,8 @@ export const useCIMROSEO = () => {
       openingHours: businessHours.structured,
       medicalSpecialty: services,
       sameAs: [
-        'https://www.facebook.com/cimro',
-        'https://www.instagram.com/cimrosadecv'
+        'https://www.facebook.com/altimo.sv',
+        'https://www.instagram.com/altimo.sv'
       ]
     };
 

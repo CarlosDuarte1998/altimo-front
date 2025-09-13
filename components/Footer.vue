@@ -39,8 +39,8 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
         <div class="container m-auto px-4 py-12 md:px-6">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div class="space-y-4">
-                    <img alt="CIMRO - Centro de Imágenes Radiológicas de Occidente Santa Ana" loading="lazy" width="120" height="40" decoding="async" data-nimg="1"
-                        class="h-16 w-auto" style="color: transparent" src="/logo-white-horizontal.png" />
+                    <img alt="ALTIMO - MEDICAL CENTER" loading="lazy" width="120" height="40" decoding="async" data-nimg="1"
+                        class="h-16 w-auto" style="color: transparent" src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Logoaltimo_blanco.png" />
                     <p class="text-sm text-blue-100">
                         {{ corporateInfo.name }}, ofreciendo servicios
                         de diagnóstico por imágenes con tecnología avanzada y atención
