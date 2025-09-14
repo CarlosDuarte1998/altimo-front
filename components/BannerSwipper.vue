@@ -14,9 +14,9 @@ const hasBanners = computed(() => configStore.hasBanners);
 // Swiper
 const containerRef = ref(null);
 
-// SEO Keywords para CIMRO - Centro de Imágenes Radiológicas de Occidente
+// SEO Keywords para ALTIMO - Medical Center
 const seoKeywords = [
-  'CIMRO', 'Centro de Imágenes Radiológicas de Occidente', 'Santa Ana',
+  'ALTIMO', 'Medical Center', 'Santa Ana',
   'tomografía computarizada Santa Ana', 'ultrasonidos Santa Ana', 'rayos x Santa Ana',
   'mamografía Santa Ana', 'cardiología Santa Ana', 'diagnóstico por imágenes El Salvador',
   'radiología occidente El Salvador', 'centro médico Santa Ana'
@@ -62,11 +62,11 @@ watch([isDataLoaded, hasBanners], ([loaded, banners]) => {
 </script>
 
 <template>
-  <!-- Skeleton Loader para CIMRO - Centro de Imágenes Radiológicas de Occidente -->
+  <!-- Skeleton Loader para ALTIMO - Medical Center -->
   <div 
     v-if="!isDataLoaded" 
     class="relative h-[500px] sm:h-[700px] w-full bg-gray-200 animate-pulse"
-    aria-label="Cargando contenido de CIMRO Santa Ana"
+    aria-label="Cargando contenido de ALTIMO Santa Ana"
   >
     <div class="absolute inset-0 bg-gradient-to-r from-gray-800/80 to-transparent flex items-center justify-start px-4 sm:px-8 md:px-16">
       <div class="z-10 space-y-2 sm:space-y-4">
@@ -86,31 +86,31 @@ watch([isDataLoaded, hasBanners], ([loaded, banners]) => {
     </div>
   </div>
 
-  <!-- Banner principal CIMRO - Centro de Imágenes Radiológicas de Occidente -->
+  <!-- Banner principal ALTIMO - Medical Center -->
   <swiper-container 
     v-if="isDataLoaded && hasBanners" 
     ref="containerRef" 
     :init="false"
     role="banner"
-    aria-label="Banner principal de CIMRO - Centro de Imágenes Radiológicas de Occidente, Santa Ana El Salvador"
+    aria-label="Banner principal de ALTIMO - Medical Center, Santa Ana El Salvador"
   >
     <template v-for="(slide, index) in bannerMain" :key="index">
       <swiper-slide 
         class="relative overflow-hidden" 
-        :aria-label="`Slide ${index + 1}: ${slide.description.title || 'Servicios de CIMRO Santa Ana'}`"
+        :aria-label="`Slide ${index + 1}: ${slide.description.title || 'Servicios de ALTIMO Santa Ana'}`"
       >
         <div class="relative h-[500px] sm:h-[700px] w-full overflow-hidden">
           <template v-for="(item, index2) in slide.images" :key="index2">
             <img 
               :src="item.url" 
-              :alt="`CIMRO Centro de Imágenes Radiológicas de Occidente Santa Ana - ${slide.description.title || 'Servicios de diagnóstico por imágenes'}`" 
+              :alt="`ALTIMO Medical Center Santa Ana - ${slide.description.title || 'Servicios de diagnóstico por imágenes'}`" 
               class="w-full h-full object-cover hidden sm:block absolute inset-0" 
               v-if="index2 == 'desktop'" 
               loading="lazy"
             />
             <img 
               :src="item.url" 
-              :alt="`CIMRO Centro de Imágenes Radiológicas de Occidente Santa Ana - ${slide.description.title || 'Servicios radiológicos El Salvador'}`" 
+              :alt="`ALTIMO Medical Center Santa Ana - ${slide.description.title || 'Servicios radiológicos El Salvador'}`" 
               class="sm:hidden w-full h-full object-cover absolute inset-0" 
               loading="lazy" 
               v-else
@@ -132,8 +132,8 @@ watch([isDataLoaded, hasBanners], ([loaded, banners]) => {
               </p>
               <a :href="slide.description.link"
                 class="inline-block mt-3 sm:mt-4 md:mt-6 px-4 py-2 sm:px-6 sm:py-3 bg-blue-600 text-white text-sm sm:text-base rounded-md hover:bg-blue-700 transition-colors min-h-[40px] sm:min-h-[44px] min-w-[40px] sm:min-w-[44px] font-medium"
-                :aria-label="`${slide.description.btnLabel || 'Conocer más'} - ${slide.description.title} - CIMRO Centro de Imágenes Radiológicas de Occidente Santa Ana`"
-                :title="`${slide.description.btnLabel || 'Conocer más'} sobre ${slide.description.title} en CIMRO Santa Ana`">
+                :aria-label="`${slide.description.btnLabel || 'Conocer más'} - ${slide.description.title} - ALTIMO Medical Center Santa Ana`"
+                :title="`${slide.description.btnLabel || 'Conocer más'} sobre ${slide.description.title} en ALTIMO Santa Ana`">
                 {{ slide.description.btnLabel || 'Conocer más' }}
               </a>
             </div>
@@ -145,7 +145,7 @@ watch([isDataLoaded, hasBanners], ([loaded, banners]) => {
 
   <!-- Contenido SEO oculto para mejorar indexación -->
   <div class="sr-only" aria-hidden="true">
-    <h2>CIMRO - Centro de Imágenes Radiológicas de Occidente Santa Ana</h2>
+    <h2>ALTIMO - Medical Center Santa Ana</h2>
     <p>
       Servicios de diagnóstico por imágenes en Santa Ana, El Salvador. 
       Tomografía computarizada multicorte, ultrasonidos convencionales y especiales, 

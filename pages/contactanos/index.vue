@@ -2,7 +2,7 @@
 import { UButton } from '#components';
 import {useContactStore, useConfigStore} from '#imports';
 
-const { corporateInfo, getKeywordsString, generateDescription, businessHours } = useCIMROSEO();
+const { corporateInfo, getKeywordsString, generateDescription, businessHours } = useALTIMOSEO();
 const configStore = useConfigStore();
 
 // Usar información de contacto de la API o fallback al composable
@@ -36,11 +36,11 @@ useSeoMeta({
   title: `Contacto - Agende su Cita | ${corporateInfo.name}`,
   description: generateDescription(`Contáctenos para agendar su cita de diagnóstico por imágenes en ${corporateInfo.location}. ${businessHours.weekdays}. ${businessHours.saturday}. Atención personalizada y tecnología de vanguardia.`),
   keywords: getKeywordsString([
-    'contacto CIMRO Santa Ana',
+    'contacto ALTIMO Santa Ana',
     'agendar cita radiología Santa Ana',
-    'teléfono CIMRO',
+    'teléfono ALTIMO',
     'dirección centro imágenes Santa Ana',
-    'horarios CIMRO El Salvador',
+    'horarios ALTIMO El Salvador',
     'cita diagnóstico por imágenes'
   ]),
   ogTitle: `Contacto - ${corporateInfo.shortName} Centro de Imágenes Santa Ana`,

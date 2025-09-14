@@ -128,9 +128,9 @@ const whatsappUrl = computed(() => {
 
 // Meta tags dinámicos
 useSeoMeta({
-  title: computed(() => `${serviceTitle.value} - CIMRO`),
+  title: computed(() => `${serviceTitle.value} - ALTIMO`),
   description: computed(() => serviceDescription.value),
-  ogTitle: computed(() => `${serviceTitle.value} - CIMRO`),
+  ogTitle: computed(() => `${serviceTitle.value} - ALTIMO`),
   ogDescription: computed(() => serviceDescription.value),
   ogImage: computed(() => imageUrl.value),
   twitterCard: 'summary_large_image'
