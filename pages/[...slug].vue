@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { corporateInfo } = useCIMROSEO();
+const { corporateInfo } = useALTIMOSEO();
 
 // SEO para página de error
 useSeoMeta({

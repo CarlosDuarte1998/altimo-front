@@ -2,7 +2,7 @@
 import BannerSwipper from '~/components/BannerSwipper.vue';
 
 const categoriesStore = useCategoriesStore();
-const { corporateInfo, getKeywordsString, generateDescription, getSchemaData } = useCIMROSEO();
+const { corporateInfo, getKeywordsString, generateDescription, getSchemaData } = useALTIMOSEO();
 
 // SEO Meta Tags para la página principal
 useSeoMeta({
