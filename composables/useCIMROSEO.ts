@@ -5,8 +5,8 @@ export const useCIMROSEO = () => {
     shortName: 'ALTIMO',
     location: 'Santa Ana, El Salvador',
     address: 'Entre, 23 Calle Oriente, Avenida Independencia Sur, Santa Ana CP 2201',
-    phone: '+503 2484-5500',
-    email: 'comercializacioncimro@gmail.com',
+    phone: '+503 2401-2800',
+    email: 'info@altimosv.com',
     whatsapp: '+503 7746-1474',
     website: 'altimosv.com'
   };
@@ -69,9 +69,9 @@ export const useCIMROSEO = () => {
 
   // Horarios de atención
   const businessHours = {
-    weekdays: 'Lunes a Viernes: 7:30 a.m a 5:30 p.m',
-    saturday: 'Sábado: 7:30 a.m. a 1:00 p.m',
-    structured: ['Mo-Fr 07:30-17:30', 'Sa 07:30-13:00']
+    weekdays: 'Lunes a Viernes: 7:00 a.m a 5:00 p.m',
+    saturday: 'Sábado: 7:00 a.m. a 1:00 p.m',
+    structured: ['Mo-Fr 07:00-17:00', 'Sa 07:00-12:00']
   };
 
   // Meta descripción base

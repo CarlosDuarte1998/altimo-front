@@ -42,9 +42,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                     <img alt="ALTIMO - MEDICAL CENTER" loading="lazy" width="120" height="40" decoding="async" data-nimg="1"
                         class="h-16 w-auto" style="color: transparent" src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Logoaltimo_blanco.png" />
                     <p class="text-sm text-white">
-                        {{ corporateInfo.name }}, ofreciendo servicios
-                        de diagnóstico por imágenes con tecnología avanzada y atención
-                        humanizada en Santa Ana, El Salvador.
+                        {{ corporateInfo.name }}, conoce más sobre ÁLTIMO, nuestro compromiso con la excelencia médica y la atención humanizada.
                     </p>
                 </div>
                 <div>
@@ -59,6 +57,10 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                                 Quiénes Somos</NuxtLink>
                         </li>
                         <li>
+                            <NuxtLink class="transition-colors hover:text-white hover:underline" to="/directorio-medico">
+                                Directorio Médico</NuxtLink>
+                        </li>
+                        <li>
                             <NuxtLink class="transition-colors hover:text-white hover:underline" to="/servicios">
                                 Servicios</NuxtLink>
                         </li>
@@ -66,14 +68,14 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                             <NuxtLink class="transition-colors hover:text-white hover:underline" to="/noticias">Noticias
                             </NuxtLink>
                         </li>
-                        <li>
+                        <!-- <li>
                             <NuxtLink class="transition-colors hover:text-white hover:underline" to="/videos">Vídeos
                             </NuxtLink>
                         </li>
                         <li>
                             <NuxtLink class="transition-colors hover:text-white hover:underline" to="/turismo-salud">
                                 Turismo Salud</NuxtLink>
-                        </li>
+                        </li> -->
                         <li>
                             <a class="transition-colors hover:text-white hover:underline" to="/agendar-cita">
                                 Agendar Cita</a>
@@ -88,7 +90,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                     <h3 class="mb-4 text-lg font-medium">Contacto</h3>
                     <ul class="space-y-3 text-sm text-white">
                         <li class="flex items-start gap-2">
-                            <a href="https://www.google.com/maps/place/CIMRO/@13.980591,-89.556548,2188m/data=!3m1!1e3!4m6!3m5!1s0x8f62e8985656487b:0x58c9970ccf7141de!8m2!3d13.9805909!4d-89.5565483!16s%2Fg%2F11c54f45mc?hl=es&entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+                            <a href="https://maps.app.goo.gl/sVtSs3GtPaxTRJYo6"
                                 class="flex items-center gap-2 transition-colors hover:text-white hover:underline"
                                 target="_blank" rel="noopener noreferrer"
                                 aria-label="Ver ubicación de ALTIMO en Google Maps">
@@ -159,13 +161,13 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                        
                     </div>
 
-                    <div class="mt-6">
+                    <!-- <div class="mt-6">
                         <h4 class="mb-2 text-sm font-medium">Horario de Atención</h4>
                         <p class="text-sm text-white">
                             {{ hours.weekdays }}
                         </p>
                         <p class="text-sm text-white">{{ hours.saturday }}</p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-500 pt-8 text-center text-sm text-white">

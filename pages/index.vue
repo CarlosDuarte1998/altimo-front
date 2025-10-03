@@ -59,8 +59,7 @@ const mainCategories = computed(() => {
             <h1 class=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                Nuestros Servicios
             </h1>
-            <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos una amplia gama de servicios de diagnóstico
-               por imagen con la más alta tecnología y personal especializado.</p>
+            <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos servicios de laboratorio clínico, cirugías y hospitalización con altos estándares de calidad.</p>
 
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 mt-10 px-5 md:px-0">
                <NuxtLink 
@@ -137,17 +136,17 @@ const mainCategories = computed(() => {
       <div class="container m-auto px-4 md:px-6 max-w-[1300px]">
          <div class="mb-12 text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">¿Por qué elegirnos?</h2>
-            <p class="mx-auto mt-4 max-w-[700px] text-gray-500">En CIMRO nos distinguimos por ofrecer un servicio de excelencia con tecnología de vanguardia.</p>
+            <p class="mx-auto mt-4 max-w-[700px] text-gray-500">En Áltimo nos distinguimos por nuestro compromiso de brindar excelencia médica y calidad en cada servicio.</p>
          </div>
          
          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <!-- Tecnología Avanzada -->
+            <!-- CONFIANZA -->
             <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-shield-check" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Tecnología Avanzada</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Contamos con equipos de última generación para garantizar diagnósticos precisos y confiables.</p>
+               <h3 class="mb-3 text-xl font-semibold text-gray-900">Confianza</h3>
+               <p class="text-gray-600 text-sm leading-relaxed">Nuestro compromiso es generar confianza a cada paciente a través de un servicio seguro y de calidad.</p>
             </div>
 
             <!-- Atención Humanizada -->
@@ -159,40 +158,13 @@ const mainCategories = computed(() => {
                <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal está comprometido con brindar un trato cálido y respetuoso a cada paciente.</p>
             </div>
 
-            <!-- Médicos Especialistas -->
+            <!-- Profesionalismo -->
             <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-academic-cap" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Médicos Especialistas</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Contamos con un equipo de radiólogos certificados con amplia experiencia en diagnóstico por imagen.</p>
-            </div>
-
-            <!-- Resultados Rápidos -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-               <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                  <UIcon name="i-heroicons-clock" class="w-8 h-8 text-blue-600" />
-               </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Resultados Rápidos</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Entregamos los resultados en el menor tiempo posible, con la opción de consulta en línea.</p>
-            </div>
-
-            <!-- Citas Flexibles -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-               <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                  <UIcon name="i-heroicons-calendar-days" class="w-8 h-8 text-blue-600" />
-               </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Citas Flexibles</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Ofrecemos horarios extendidos y la posibilidad de agendar citas en línea para su comodidad.</p>
-            </div>
-
-            <!-- Diagnósticos Precisos -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-               <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                  <UIcon name="i-heroicons-magnifying-glass" class="w-8 h-8 text-blue-600" />
-               </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Diagnósticos Precisos</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Nuestro compromiso es ofrecer diagnósticos de alta precisión que contribuyan a su salud.</p>
+               <h3 class="mb-3 text-xl font-semibold text-gray-900">Profesionalismo</h3>
+               <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal se distingue por su profesionalismo y compromiso con la salud de cada paciente.</p>
             </div>
          </div>
       </div>
@@ -206,7 +178,7 @@ const mainCategories = computed(() => {
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos múltiples opciones de pago para su comodidad y facilidad de acceso a nuestros servicios.</p>
          </div>
          
-         <div class="grid gap-8 grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto">
+         <div class="grid gap-8 grid-cols-1 md:grid-cols-4 max-w-6xl mx-auto">
             <!-- Tasa 0 -->
             <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-green-200">
                <div class="mb-6 w-20 h-20 rounded-full bg-green-500 flex items-center justify-center">
@@ -238,13 +210,26 @@ const mainCategories = computed(() => {
                </div>
             </div>
 
-            <!-- Cheque -->
+            <!-- Transferencias -->
+            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-blue-50 to-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
+               <div class="mb-6 w-20 h-20 rounded-full bg-sky-500 flex items-center justify-center">
+                  <UIcon name="i-heroicons-document-text" class="w-10 h-10 text-white" />
+               </div>
+               <h3 class="mb-4 text-2xl font-bold text-sky-700">Transferencias nacionales e internacionales</h3>
+               <p class="text-gray-700 text-sm leading-relaxed mb-4">Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.</p>
+               <div class="mt-auto">
+                  <span class="inline-block px-4 py-2 bg-sky-500 text-white text-sm font-medium rounded-full">
+                     Seguro y Confiable
+                  </span>
+               </div>
+            </div>
+            <!-- Certificado -->
             <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
                <div class="mb-6 w-20 h-20 rounded-full bg-purple-500 flex items-center justify-center">
                   <UIcon name="i-heroicons-document-text" class="w-10 h-10 text-white" />
                </div>
-               <h3 class="mb-4 text-2xl font-bold text-purple-700">Cheque</h3>
-               <p class="text-gray-700 text-sm leading-relaxed mb-4">Pago tradicional con cheque para mayor seguridad y control de sus transacciones.</p>
+               <h3 class="mb-4 text-2xl font-bold text-purple-700">Certificado prepago</h3>
+               <p class="text-gray-700 text-sm leading-relaxed mb-4">Pago con certificado de regalo mediante código o enlace.</p>
                <div class="mt-auto">
                   <span class="inline-block px-4 py-2 bg-purple-500 text-white text-sm font-medium rounded-full">
                      Seguro y Confiable

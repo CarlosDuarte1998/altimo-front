@@ -52,6 +52,9 @@ const handleLogoClick = () => {
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/quienes-somos' }"
                     to="/quienes-somos">Quiénes Somos</NuxtLink>
+                    <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
+                    :class="{ 'border-blue-600 text-blue-600': route.path === '/directorio-medico' }"
+                    to="/directorio-medico">Directorio Médico</NuxtLink>
  <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path.startsWith('/servicios') }"
                     to="/servicios">Servicios</NuxtLink>
@@ -59,20 +62,21 @@ const handleLogoClick = () => {
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/noticias' }"
                     to="/noticias">Noticias</NuxtLink>
-                <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
+                
+                <!-- <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/videos' }"
                     to="/videos">
                     Vídeos</NuxtLink>
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/turismo-salud' }"
-                    to="/turismo-salud">Turismo Salud</NuxtLink>
+                    to="/turismo-salud">Turismo Salud</NuxtLink> -->
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/contactanos' }"
                     to="/contactanos">Contáctanos</NuxtLink>
                 <a class="items-center justify-center gap-2 rounded-md text-sm font-semibold h-10 px-4 py-2 hidden bg-[#001A70] hover:bg-blue-700 md:inline-flex text-white min-h-[44px]"
                     href="https://wa.me/50377461474?text=Hola,%20quisiera%20informaci%C8%AFn"
                     aria-label="Contactar por WhatsApp para información">
-                    Contáctanos
+                    Iniciar Sesión
                 </a>
             </div>
         </nav>
@@ -101,22 +105,27 @@ const handleLogoClick = () => {
                                 to="/quienes-somos" @click="toggleSlideover">Quiénes Somos
                             </NuxtLink>
                             <NuxtLink class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
+                                :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/directorio-medico' }"
+                                to="/directorio-medico" @click="toggleSlideover">Directorio Médico
+                            </NuxtLink>
+                            <NuxtLink class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path.startsWith('/servicios') }"
                                 to="/servicios" @click="toggleSlideover">Servicios</NuxtLink>
 
                             <NuxtLink @click="toggleSlideover" class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/noticias' }"
                                 to="/noticias">Noticias</NuxtLink>
-                            <NuxtLink @click="toggleSlideover" class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
+                            
+                            <!-- <NuxtLink @click="toggleSlideover" class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/videos' }"
                                 to="/videos">Vídeos</NuxtLink>
                             <NuxtLink @click="toggleSlideover" class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/turismo-salud' }"
                                 to="/turismo-salud">Turismo Salud
-                            </NuxtLink>
+                            </NuxtLink> -->
                             <NuxtLink @click="toggleSlideover" class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/contactanos' }"
-                                to="/contactanos">Contáctanos</NuxtLink>
+                                to="/contactanos">Iniciar Sesión</NuxtLink>
                            
                             
                         </nav>
