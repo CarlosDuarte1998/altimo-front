@@ -219,7 +219,7 @@
 </template>
 
 <script setup lang="ts">
-const { corporateInfo, getKeywordsString, generateDescription } = useCIMROSEO();
+const { corporateInfo, getKeywordsString, generateDescription } = useALTIMOSEO();
 
 // SEO optimizado para página "Quiénes Somos"
 useSeoMeta({

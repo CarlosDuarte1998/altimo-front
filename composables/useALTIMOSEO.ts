@@ -1,4 +1,4 @@
-export const useCIMROSEO = () => {
+export const useALTIMOSEO = () => {
   // Información corporativa de CIMRO
   const corporateInfo = {
     name: 'ALTIMO - MEDICAL CENTER',

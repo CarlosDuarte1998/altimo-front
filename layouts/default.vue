@@ -2,10 +2,11 @@
 import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
 import { useConfigStore } from "#imports";
+import { useALTIMOSEO } from "~/composables/useALTIMOSEO";
 
 //store
 const configStore = useConfigStore();
-const { corporateInfo } = useCIMROSEO();
+const { corporateInfo } = useALTIMOSEO();
 
 const socialMediaLinks = computed(() => configStore.socialMedia);
 

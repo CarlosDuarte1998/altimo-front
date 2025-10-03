@@ -129,7 +129,7 @@
 const { formatDate, cleanExcerpt } = usePosts()
 
 // SEO y meta
-useCIMROSEO({
+useALTIMOSEO({
   title: 'Noticias y Novedades',
   description: 'Mantente informado sobre las últimas novedades, eventos y avances en CIMRO. Descubre nuestras noticias más recientes.',
   keywords: 'CIMRO noticias, novedades, eventos, diagnóstico por imagen, actualidades médicas'

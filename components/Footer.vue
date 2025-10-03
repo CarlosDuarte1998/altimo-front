@@ -3,7 +3,7 @@ import { useConfigStore } from "#imports";
 
 //store
 const configStore = useConfigStore();
-const { corporateInfo, businessHours } = useCIMROSEO();
+const { corporateInfo, businessHours } = useALTIMOSEO();
 
 // Usar información de contacto de la API o fallback al composable
 const contactInfo = computed(() => {

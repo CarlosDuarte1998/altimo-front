@@ -242,7 +242,7 @@ interface Category {
   parent?: number
 }
 
-const { corporateInfo, getKeywordsString, generateDescription, services } = useCIMROSEO();
+const { corporateInfo, getKeywordsString, generateDescription, services } = useALTIMOSEO();
 const categoriesStore = useCategoriesStore()
 
 // Type assertion para el store

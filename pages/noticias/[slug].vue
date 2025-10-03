@@ -338,7 +338,7 @@ const handleCopyToClipboard = async () => {
 // SEO
 if (post.value) {
   const seoMeta = getPostSEOMeta(post.value, useRuntimeConfig().public.SITE_URL)
-  useCIMROSEO(seoMeta)
+  useALTIMOSEO(seoMeta)
 }
 
 // Handle 404
