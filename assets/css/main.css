@@ -43,6 +43,19 @@ body {
 
 /* Mejoras de accesibilidad */
 
+/* Screen Reader Only - Oculta visualmente pero mantiene accesible */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 /* Asegurar que todos los elementos interactivos tengan un tamaño mínimo de 44px */
 button, a[role="button"], input[type="button"], input[type="submit"] {
   min-height: 44px;
@@ -83,4 +96,30 @@ textarea:focus-visible {
 
 .skip-link:focus {
   top: 6px;
+}
+
+/* Estilos para modal - Mejorar scroll */
+/* Personalizar scrollbar en el body del modal */
+.modal-body-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-body-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.modal-body-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.modal-body-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Para Firefox */
+.modal-body-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
