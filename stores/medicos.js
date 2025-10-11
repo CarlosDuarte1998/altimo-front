@@ -77,6 +77,10 @@ export const useMedicosStore = defineStore('medicos', {
         experiencia: detalles.experiencia || '',
         certificaciones: detalles.certificaciones || [],
         horarios: detalles.horarios || '',
+        //datos nuevos
+        celular: detalles.celular || '',
+        direccion: detalles.direccion || '',
+        servicios: detalles.servicios || '',
         // Datos originales por si se necesitan
         acf: medico.acf || {}
       }

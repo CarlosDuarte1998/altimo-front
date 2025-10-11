@@ -174,9 +174,9 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                 <p>
                     © 2025 {{ corporateInfo.name }}. Todos los derechos reservados.
                 </p>
-                <p class="mt-2">
+                <!-- <p class="mt-2">
                     Centro especializado en diagnóstico por imágenes en Santa Ana, El Salvador
-                </p>
+                </p> -->
             </div>
         </div>
     </footer>

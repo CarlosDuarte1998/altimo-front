@@ -178,16 +178,28 @@ const mainCategories = computed(() => {
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos múltiples opciones de pago para su comodidad y facilidad de acceso a nuestros servicios.</p>
          </div>
          
-         <div class="grid gap-8 grid-cols-1 md:grid-cols-4 max-w-6xl mx-auto">
+         <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
             <!-- Tasa 0 -->
-            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-green-50 to-green-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-green-200">
-               <div class="mb-6 w-20 h-20 rounded-full bg-green-500 flex items-center justify-center">
+            <!-- <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-[#66CCCC] to-[#66CCCC] rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-green-200">
+               <div class="mb-6 w-20 h-20 rounded-full bg-[#213266] flex items-center justify-center">
                   <UIcon name="i-heroicons-percent-badge" class="w-10 h-10 text-white" />
                </div>
-               <h3 class="mb-4 text-2xl font-bold text-green-700">Tasa 0%</h3>
+               <h3 class="mb-4 text-2xl font-bold text-[#213266]">Tasa 0%</h3>
                <p class="text-gray-700 text-sm leading-relaxed mb-4">Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.</p>
                <div class="mt-auto">
-                  <span class="inline-block px-4 py-2 bg-green-500 text-white text-sm font-medium rounded-full">
+                  <span class="inline-block px-4 py-2 bg-[#213266] text-white text-sm font-medium rounded-full">
+                     Sin Intereses
+                  </span>
+               </div>
+            </div> -->
+            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-green-200">
+               <div class="mb-6 w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center">
+                  <UIcon name="i-heroicons-percent-badge" class="w-10 h-10 text-white" />
+               </div>
+               <h3 class="mb-4 text-2xl font-bold text-blue-700">Tasa 0%</h3>
+               <p class="text-gray-700 text-sm leading-relaxed mb-4">Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.</p>
+               <div class="mt-auto">
+                  <span class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-full">
                      Sin Intereses
                   </span>
                </div>
@@ -211,27 +223,27 @@ const mainCategories = computed(() => {
             </div>
 
             <!-- Transferencias -->
-            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-blue-50 to-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
-               <div class="mb-6 w-20 h-20 rounded-full bg-sky-500 flex items-center justify-center">
-                  <UIcon name="i-heroicons-document-text" class="w-10 h-10 text-white" />
+            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
+               <div class="mb-6 w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center">
+                  <UIcon name="solar:card-transfer-broken" class="w-10 h-10 text-white" />
                </div>
-               <h3 class="mb-4 text-2xl font-bold text-sky-700">Transferencias nacionales e internacionales</h3>
+               <h3 class="mb-4 text-2xl font-bold text-blue-700">Transferencias nacionales e internacionales</h3>
                <p class="text-gray-700 text-sm leading-relaxed mb-4">Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.</p>
                <div class="mt-auto">
-                  <span class="inline-block px-4 py-2 bg-sky-500 text-white text-sm font-medium rounded-full">
+                  <span class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-full">
                      Seguro y Confiable
                   </span>
                </div>
             </div>
             <!-- Certificado -->
-            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
-               <div class="mb-6 w-20 h-20 rounded-full bg-purple-500 flex items-center justify-center">
-                  <UIcon name="i-heroicons-document-text" class="w-10 h-10 text-white" />
+            <div class="flex flex-col items-center text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-purple-200">
+               <div class="mb-6 w-20 h-20 rounded-full bg-blue-500 flex items-center justify-center">
+                  <UIcon name="nimbus:gift-card" class="w-10 h-10 text-white" />
                </div>
-               <h3 class="mb-4 text-2xl font-bold text-purple-700">Certificado prepago</h3>
+               <h3 class="mb-4 text-2xl font-bold text-blue-700">Certificado prepago</h3>
                <p class="text-gray-700 text-sm leading-relaxed mb-4">Pago con certificado de regalo mediante código o enlace.</p>
                <div class="mt-auto">
-                  <span class="inline-block px-4 py-2 bg-purple-500 text-white text-sm font-medium rounded-full">
+                  <span class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-full">
                      Seguro y Confiable
                   </span>
                </div>
