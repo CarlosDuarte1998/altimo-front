@@ -251,6 +251,97 @@
   </div>
 </section>
 
+<section class="py-16">
+  <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Nuestro Equipo</h2>
+      <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
+        Contamos con un equipo de profesionales altamente calificados y comprometidos con su salud.
+      </p>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Miembro 1 -->
+      <div class="text-center bg-white rounded-2xl shadow-md p-4">
+        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+          <img
+            alt="Dr. Salvador Rodríguez"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-60 object-cover"
+            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Rodriguez-scaled-e1760502729464.jpeg"
+            style="color: transparent;"
+          />
+        </div>
+        <h3 class="text-lg font-medium">Dr. Salvador Rodríguez</h3>
+        <p class="text-sm text-gray-500">Presidente</p>
+        <p class="mt-2 text-sm text-gray-600 text-justify">
+          Doctor en Cirugía Dental y Empresario con amplia trayectoria en el sector salud. Fundador del Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Centro Médico Áltimo.
+        </p>
+      </div>
+
+      <!-- Miembro 2 -->
+      <div class="text-center bg-white rounded-2xl shadow-md p-4">
+        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+          <img
+            alt="Dr. Christian Hernández"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-60 object-cover"
+            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Christian-Hernandez-scaled-e1760503230245.jpeg"
+            style="color: transparent;"
+          />
+        </div>
+        <h3 class="text-lg font-medium">Dr. Christian Hernández</h3>
+        <p class="text-sm text-gray-500">Director Médico</p>
+        <p class="mt-2 text-sm text-gray-600 text-justify">
+          Especialista en Cirugía General, Endoscópica, Bariátrica y Metabólica, con 23 años de experiencia. Cuenta con diversidad de cursos y diplomados que respaldan su formación y trayectoria en el área quirúrgica.
+        </p>
+      </div>
+
+      <!-- Miembro 3 -->
+      <div class="text-center bg-white rounded-2xl shadow-md p-4">
+        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+          <img
+            alt="Dra. Alma Flores"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-60 object-cover"
+            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Alma-Flores-e1760503297576.jpeg"
+            style="color: transparent;"
+          />
+        </div>
+        <h3 class="text-lg font-medium">Dra. Alma Flores</h3>
+        <p class="text-sm text-gray-500">Regente Médico</p>
+        <p class="mt-2 text-sm text-gray-600 text-justify">
+          Especialista en Medicina Interna, con 15 años de experiencia y estudios de posgrado que respaldan su formación profesional.
+        </p>
+      </div>
+
+      <!-- Miembro 4 -->
+      <div class="text-center bg-white rounded-2xl shadow-md p-4">
+        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+          <img
+            alt="Dra. Ana Sevillano"
+            loading="lazy"
+            decoding="async"
+            class="w-full h-60 object-cover"
+            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Ana-Sevillano-scaled-e1760503338350.jpg"
+            style="color: transparent;"
+          />
+        </div>
+        <h3 class="text-lg font-medium">Dra. Ana Sevillano</h3>
+        <p class="text-sm text-gray-500">Regente Médico</p>
+        <p class="mt-2 text-sm text-gray-600 text-justify">
+          Especialista en Medicina Interna, con 25 años de experiencia, con participación en diversidad de congresos que fortalecen su formación y actualización en la práctica médica.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
     <!--INSTALACIONES-->
 
     <section class="bg-gray-50 py-16">
