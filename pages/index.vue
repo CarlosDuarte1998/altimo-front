@@ -313,7 +313,7 @@ const mainCategories = computed(() => {
 
    </section>
 
-   <section class="py-16">
+   <!-- <section class="py-16">
       <div class="container px-4 md:px-6 max-w-[1300px] m-auto">
          <div class="mb-12 text-center">
             <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Lo que dicen nuestros pacientes</h2>
@@ -322,15 +322,14 @@ const mainCategories = computed(() => {
          </div>
          <div class="taggbox" style="width:100%;height:100%;overflow:auto;" data-widget-id="285784" website="1"></div>
       </div>
-   </section>
+   </section> -->
 
-   <section>
+   <!-- <section>
       <div class="mb-6 text-center">
          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-3xl">Aseguradoras Afiliadas</h2>
-
       </div>
       <BransLoop />
-   </section>
+   </section> -->
 
  
 
