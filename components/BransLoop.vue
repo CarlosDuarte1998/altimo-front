@@ -1,121 +1,90 @@
 <script setup>
-import { onMounted } from 'vue'
-
 import { useConfigStore } from '#imports';
 
 const configStore = useConfigStore();
-let insurances = computed(() => configStore.insurance || []);
 
-onMounted(() => {
-    const logos = document.getElementById("slider")?.cloneNode(true);
-    if (logos) {
-        document.getElementById("logos")?.appendChild(logos);
-    }
+// Cargar configuraciones al montar
+onMounted(async () => {
+  if (!configStore.hasDataLoaded) {
+    await configStore.fetchConfiguraciones();
+  }
 });
 
-
-
-
+// Computed para las aseguradoras
+const insurances = computed(() => configStore.insurance || []);
 </script>
 
 
 <template>
-    <!-- Brans Loop infinity -->
-
-
-
-
-    <div class="logos" id="logos" >
-
-        <div class="logos-slide hidden lg:flex" id="slider">
-            <template v-for="item in insurances">
-
-                <img :src="item.imagen" alt="" srcset="" class="" loading="lazy" />
-
-
-            </template>
-
+    <!-- Version Desktop con UMarquee -->
+    <div class="hidden lg:block py-8 w-full">
+        <UMarquee 
+            v-if="insurances.length > 0"
+            :pause-on-hover="false"
+            :ui="{
+                root: '[--duration:60s]',
+                content: 'gap-[70px]'
+            }"
+        >
+            <div 
+                v-for="(item, index) in insurances" 
+                :key="index"
+                class="logo-item"
+            >
+                <img 
+                    :src="item.imagen" 
+                    :alt="item.nombre || 'Logo aseguradora'" 
+                    class="logo-desktop"
+                    loading="lazy"
+                />
+            </div>
+        </UMarquee>
+        
+        <!-- Fallback si no hay logos -->
+        <div v-else class="text-center text-gray-500">
+            Cargando aseguradoras...
         </div>
-
     </div>
-    <div>
-        <div class="grid grid-cols-2 px-5 lg:hidden" >
-            <template v-for="item in insurances">
 
-               <div class="flex justify-center items-center">
-                 <img :src="item.imagen" alt="" srcset="" class="logos-mobile" loading="lazy"  />
+    <!-- Version Mobile (sin cambios) -->
+    <div class="lg:hidden">
+        <div class="grid grid-cols-2 px-5">
+            <template v-for="(item, index) in insurances" :key="index">
+               <div class="flex justify-center items-center py-4">
+                 <img 
+                    :src="item.imagen" 
+                    :alt="item.nombre || 'Logo aseguradora'" 
+                    class="logos-mobile" 
+                    loading="lazy" 
+                 />
                </div>
-
-
             </template>
-
+        </div>
+        
+        <!-- Fallback mobile -->
+        <div v-if="insurances.length === 0" class="text-center text-gray-500 py-8">
+            Cargando aseguradoras...
         </div>
     </div>
-
-
 </template>
 
 <style scoped>
-.logos {
-    width: 80%;
-    display: flex;
-    margin: auto;
-    overflow: hidden;
-    background: white;
-    white-space: nowrap;
-    position: relative;
-    padding: px 0;
+/* Desktop logos */
+.logo-item {
+    padding: 0 35px;
 }
 
-.logos-slide {
-    animation: 20s slide infinite linear;
-
-    img {
-        display: inline-block;
-        width: 150px;
-        margin: 0px 70px;
-        aspect-ratio: 1/1;
-        object-fit: contain;
-    }
+.logo-desktop {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
 }
 
-.logos::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 100%;
-    content: "";
-    background: linear-gradient(to left, rgb(255, 255, 255, 0), rgb(255, 255, 255));
-    z-index: 1;
-}
-
+/* Mobile logos */
 .logos-mobile {
     display: inline-block;
     width: 150px;
     aspect-ratio: 1/1;
     object-fit: contain;
-}
-
-.logos::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100%;
-    content: "";
-    background: linear-gradient(to right, rgb(255, 255, 255, 0), rgb(255, 255, 255));
-    z-index: 1;
-}
-
-/* Animacion */
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
 }
 </style>
