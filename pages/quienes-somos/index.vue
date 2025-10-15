@@ -268,7 +268,7 @@
             alt="Dr. Salvador Rodríguez"
             loading="lazy"
             decoding="async"
-            class="w-full h-60 object-cover"
+            class="w-full h-90 object-cover"
             src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Rodriguez-scaled-e1760502729464.jpeg"
             style="color: transparent;"
           />
@@ -287,7 +287,7 @@
             alt="Dr. Christian Hernández"
             loading="lazy"
             decoding="async"
-            class="w-full h-60 object-cover"
+            class="w-full h-90 object-cover"
             src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Christian-Hernandez-scaled-e1760503230245.jpeg"
             style="color: transparent;"
           />
@@ -306,7 +306,7 @@
             alt="Dra. Alma Flores"
             loading="lazy"
             decoding="async"
-            class="w-full h-60 object-cover"
+            class="w-full h-90 object-cover"
             src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Alma-Flores-e1760503297576.jpeg"
             style="color: transparent;"
           />
@@ -325,7 +325,7 @@
             alt="Dra. Ana Sevillano"
             loading="lazy"
             decoding="async"
-            class="w-full h-60 object-cover"
+            class="w-full h-90 object-cover"
             src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Ana-Sevillano-scaled-e1760503338350.jpg"
             style="color: transparent;"
           />
