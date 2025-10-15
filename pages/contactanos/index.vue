@@ -263,7 +263,7 @@ const handleSubmit = async () => {
                     <!-- Métodos de Pago Section -->
                     <div class="mt-8" v-if="!configStore.isCurrentlyLoading">
                         <h3 class="mb-6 text-xl font-medium">Métodos de Pago Disponibles</h3>
-                        <div class="grid gap-4 sm:grid-cols-3">
+                        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                             <!-- Tasa 0 -->
                             <div class="flex flex-col items-center text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-lg border border-green-200">
                                 <div class="mb-3 w-12 h-12 rounded-full bg-green-500 flex items-center justify-center">
@@ -282,13 +282,22 @@ const handleSubmit = async () => {
                                 <p class="text-xs text-gray-600">Nacional e internacional</p>
                             </div>
 
-                            <!-- Cheque -->
+                            <!-- Transferencias -->
                             <div class="flex flex-col items-center text-center p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg border border-purple-200">
                                 <div class="mb-3 w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
-                                    <UIcon name="i-heroicons-document-text" class="w-6 h-6 text-white" />
+                                    <UIcon name="solar:card-transfer-broken" class="w-6 h-6 text-white" />
                                 </div>
-                                <h4 class="text-sm font-semibold text-purple-700 mb-1">Cheque</h4>
-                                <p class="text-xs text-gray-600">Pago tradicional</p>
+                                <h4 class="text-sm font-semibold text-purple-700 mb-1">Transferencias nacionales e internacionales</h4>
+                                <p class="text-xs text-gray-600">Bancarias</p>
+                            </div>
+
+                            <!-- Certificado Prepago -->
+                            <div class="flex flex-col items-center text-center p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg border border-orange-200">
+                                <div class="mb-3 w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
+                                    <UIcon name="nimbus:gift-card" class="w-6 h-6 text-white" />
+                                </div>
+                                <h4 class="text-sm font-semibold text-orange-700 mb-1">Certificado prepago</h4>
+                                <p class="text-xs text-gray-600">Código o enlace</p>
                             </div>
                         </div>
                         <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
