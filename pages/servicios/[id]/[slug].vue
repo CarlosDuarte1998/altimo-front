@@ -76,7 +76,8 @@ const shortDetails = computed(() => {
   return servicesStore.shortDetails || {
     time: 'No especificado',
     time_reponse: 'No especificado',
-    preparation: 'No especificado'
+    preparation: 'No especificado',
+    cantidad: 'No especificado'
   };
 });
 
@@ -210,7 +211,8 @@ useSeoMeta({
                   </div>
                 </div>
                 <div class="flex items-start gap-3">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" class="lucide lucide-clock mt-0.5 h-7 w-7 shrink-0 text-blue-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
+                    class="lucide lucide-clock mt-0.5 h-7 w-7 shrink-0 text-blue-600">
                     <g fill="currentColor">
                       <path
                         d="M20 20h-4v3h4zm-4 5h4v3h-4zm4 5h-4v3h4zm2-10h4v3h-4zm4 5h-4v3h4zm-4 5h4v3h-4zm10-10h-4v3h4zm-4 5h4v3h-4zm4 5h-4v3h4zm-7-15v-3h3v-2h-3V7h-2v3h-3v2h3v3z" />
@@ -293,6 +295,18 @@ useSeoMeta({
                     <h4 class="font-medium">Preparación</h4>
                     <p class="text-sm text-gray-500">
                       {{ shortDetails.preparation }}
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 2048 2048" class="lucide lucide-shield-alert mt-0.5 h-5 w-5 shrink-0 text-blue-600">
+                    <path fill="currentColor"
+                      d="M1152 640H512V512h640zM256 1664h681l-64 128H128V128h1408v640h-128V256H256zm256-384h617l-64 128H512zm512-384v128H512V896zm939 967q14 28 14 57q0 26-10 49t-27 41t-41 28t-50 10h-754q-26 0-49-10t-41-27t-28-41t-10-50q0-29 14-57l299-598v-241h-128V896h640v128h-128v241zm-242-199l-185-369v-271h-128v271l-185 369z" />
+                  </svg>
+                  <div>
+                    <h4 class="font-medium">Cantidad de exámenes</h4>
+                    <p class="text-sm text-gray-500">
+                      {{ shortDetails.cantidad_de_examenes }}
                     </p>
                   </div>
                 </div>
