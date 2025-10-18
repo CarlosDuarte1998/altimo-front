@@ -90,95 +90,83 @@
     </section>
 
 
-<!--CUADRADAS 80-->
-<section class="py-16">
-  <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
-    <div class="mb-12 text-center">
-      <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Nuestro Equipo</h2>
-      <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
-        Contamos con un equipo de profesionales altamente calificados y comprometidos con su salud.
-      </p>
-    </div>
+    <!--CUADRADAS 80-->
+    <section class="py-16">
+        <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Nuestro Equipo</h2>
+                <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
+                    Contamos con un equipo de profesionales altamente calificados y comprometidos con su salud.
+                </p>
+            </div>
 
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-      <!-- Miembro 1 -->
-      <div class="text-center bg-white rounded-2xl shadow-md p-4">
-        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-          <img
-            alt="Dr. Salvador Rodríguez"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-90 object-cover"
-            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Rodriguez-scaled-e1760502729464.jpeg"
-            style="color: transparent;"
-          />
-        </div>
-        <h3 class="text-lg font-medium">Dr. Salvador Rodríguez</h3>
-        <p class="text-sm text-gray-500">Presidente</p>
-        <p class="mt-2 text-sm text-gray-600 text-justify">
-          Doctor en Cirugía Dental y Empresario con amplia trayectoria en el sector salud. Fundador del Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Centro Médico Áltimo.
-        </p>
-      </div>
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <!-- Miembro 1 -->
+                <div class="text-center bg-white rounded-2xl shadow-md p-4">
+                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+                        <img alt="Dr. Salvador Rodríguez" loading="lazy" decoding="async"
+                            class="w-full h-90 object-cover"
+                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Rodriguez-scaled-e1760502729464.jpeg"
+                            style="color: transparent;" />
+                    </div>
+                    <h3 class="text-lg font-medium">Dr. Salvador Rodríguez</h3>
+                    <p class="text-sm text-gray-500">Presidente</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">
+                        Doctor en Cirugía Dental y Empresario con amplia trayectoria en el sector salud. Fundador del
+                        Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Centro
+                        Médico Áltimo.
+                    </p>
+                </div>
 
-      <!-- Miembro 2 -->
-      <div class="text-center bg-white rounded-2xl shadow-md p-4">
-        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-          <img
-            alt="Dr. Christian Hernández"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-90 object-cover"
-            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Christian-Hernandez-e1760674490972.jpeg"
-            style="color: transparent;"
-          />
-        </div>
-        <h3 class="text-lg font-medium">Dr. Christian Hernández</h3>
-        <p class="text-sm text-gray-500">Director Médico</p>
-        <p class="mt-2 text-sm text-gray-600 text-justify">
-          Especialista en Cirugía General, Endoscópica, Bariátrica y Metabólica, con 23 años de experiencia. Cuenta con diversidad de cursos y diplomados que respaldan su formación y trayectoria en el área quirúrgica.
-        </p>
-      </div>
+                <!-- Miembro 2 -->
+                <div class="text-center bg-white rounded-2xl shadow-md p-4">
+                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+                        <img alt="Dr. Christian Hernández" loading="lazy" decoding="async"
+                            class="w-full h-90 object-cover"
+                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Christian-Hernandez-e1760674490972.jpeg"
+                            style="color: transparent;" />
+                    </div>
+                    <h3 class="text-lg font-medium">Dr. Christian Hernández</h3>
+                    <p class="text-sm text-gray-500">Director Médico</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">
+                        Especialista en Cirugía General, Endoscópica, Bariátrica y Metabólica, con 23 años de
+                        experiencia. Cuenta con diversidad de cursos y diplomados que respaldan su formación y
+                        trayectoria en el área quirúrgica.
+                    </p>
+                </div>
 
-      <!-- Miembro 3 -->
-      <div class="text-center bg-white rounded-2xl shadow-md p-4">
-        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-          <img
-            alt="Dra. Alma Flores"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-90 object-cover"
-            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Alma-Flores-scaled-e1760674198612.jpg"
-            style="color: transparent;"
-          />
-        </div>
-        <h3 class="text-lg font-medium">Dra. Alma Flores</h3>
-        <p class="text-sm text-gray-500">Regente Médico</p>
-        <p class="mt-2 text-sm text-gray-600 text-justify">
-          Especialista en Medicina Interna, con 15 años de experiencia y estudios de posgrado que respaldan su formación profesional.
-        </p>
-      </div>
+                <!-- Miembro 3 -->
+                <div class="text-center bg-white rounded-2xl shadow-md p-4">
+                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+                        <img alt="Dra. Alma Flores" loading="lazy" decoding="async" class="w-full h-90 object-cover"
+                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Alma-Flores-scaled-e1760674198612.jpg"
+                            style="color: transparent;" />
+                    </div>
+                    <h3 class="text-lg font-medium">Dra. Alma Flores</h3>
+                    <p class="text-sm text-gray-500">Regente Médico</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">
+                        Especialista en Medicina Interna, con 15 años de experiencia y estudios de posgrado que
+                        respaldan su formación profesional.
+                    </p>
+                </div>
 
-      <!-- Miembro 4 -->
-      <div class="text-center bg-white rounded-2xl shadow-md p-4">
-        <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-          <img
-            alt="Dra. Ana Sevillano"
-            loading="lazy"
-            decoding="async"
-            class="w-full h-90 object-cover"
-            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Ana-Sevillano-scaled-e1760673990841.jpg"
-            style="color: transparent;"
-          />
+                <!-- Miembro 4 -->
+                <div class="text-center bg-white rounded-2xl shadow-md p-4">
+                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+                        <img alt="Dra. Ana Sevillano" loading="lazy" decoding="async" class="w-full h-90 object-cover"
+                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Ana-Sevillano-scaled-e1760673990841.jpg"
+                            style="color: transparent;" />
+                    </div>
+                    <h3 class="text-lg font-medium">Dra. Ana Sevillano</h3>
+                    <p class="text-sm text-gray-500">Regente Médico</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">
+                        Especialista en Medicina Interna, con 25 años de experiencia, con participación en diversidad de
+                        congresos que fortalecen su formación y actualización en la práctica médica.
+                    </p>
+                </div>
+            </div>
         </div>
-        <h3 class="text-lg font-medium">Dra. Ana Sevillano</h3>
-        <p class="text-sm text-gray-500">Regente Médico</p>
-        <p class="mt-2 text-sm text-gray-600 text-justify">
-          Especialista en Medicina Interna, con 25 años de experiencia, con participación en diversidad de congresos que fortalecen su formación y actualización en la práctica médica.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
 
@@ -266,7 +254,7 @@
 
 
     <!--CERTIFICACIONES Y APROBACIONES-->
-    <section class="bg-gray-50 py-16">
+    <!-- <section class="bg-gray-50 py-16">
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="mb-12 text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Permisos y Certificaciones</h2>
@@ -299,7 +287,78 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+
+
+    <section class="bg-gray-50 py-16">
+        <div class="container mx-auto max-w-[1300px] px-4 md:px-6">
+            <!-- Título -->
+            <div class="mb-12 text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">
+                    Permisos y Certificaciones
+                </h2>
+                <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
+                    Contamos con certificaciones y permisos vigentes que respaldan la calidad y seguridad de nuestros
+                    servicios.
+                </p>
+            </div>
+
+            <!-- Grid de Cards -->
+            <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+                <!-- CARD -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
+                    @click="openPdf('https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-DE-CENTRO-MEDICO-ESPECIALIZADO-.pdf')">
+                    <img src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-DE-CENTRO-MEDICO-ESPECIALIZADO-e1760764199531.png"
+                        alt="Centro médico especializado"
+                        class="h-56 w-full object-cover transition group-hover:scale-105" />
+                    <div class="p-5">
+                        <h3 class="mb-2 text-lg font-semibold text-[#213364]">Centro médico especializado</h3>
+                        <p class="text-gray-600 h-40">
+                            Licencia oficial que autoriza la operación de un centro médico especializado, asegurando que
+                            cumple con los requisitos legales, técnicos y sanitarios establecidos por las autoridades
+                            competentes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
+                    @click="openPdf('https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-LABORATORIO-CLINICO.pdf')">
+                    <img src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-LABORATORIO-CLINICO-e1760764229814.png"
+                        alt="Laboratorio clínico" class="h-56 w-full object-cover transition group-hover:scale-105" />
+                    <div class="p-5">
+                        <h3 class="mb-2 text-lg font-semibold text-[#213364]">Laboratorio clínico</h3>
+                        <p class="text-gray-600 h-40">
+                            Licencia oficial que autoriza la operación de un laboratorio clínico.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div v-if="showModal"
+            class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm">
+            <div class="relative w-full max-w-4xl rounded-xl bg-white overflow-hidden">
+                <!-- Cabecera del modal -->
+                <div class="flex items-center justify-between border-b border-gray-200 bg-gray-100 px-6 py-1">
+                    <h3 class="text-lg font-semibold text-[#213364]">Vista previa</h3>
+                    <button class="text-gray-500 hover:text-gray-800 text-xl leading-none" @click="closePdf"
+                        aria-label="Cerrar vista previa">
+                        ✕
+                    </button>
+                </div>
+
+                <!-- Contenido (PDF) -->
+                <div class="p-4">
+                    <iframe :src="pdfUrl" class="h-[80vh] w-full rounded-lg border border-gray-200"
+                        frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
     </section>
+
 
 
 </template>
@@ -307,6 +366,8 @@
 <script setup lang="ts">
 const { corporateInfo, getKeywordsString, generateDescription } = useALTIMOSEO();
 const { fetchInstalaciones, processInstalacion } = useInstalaciones();
+const showModal = ref(false)
+const pdfUrl = ref('')
 
 // Estado para instalaciones
 const instalaciones = ref<any[]>([]);
@@ -374,4 +435,12 @@ useHead({
         }
     ]
 });
+function openPdf(url: string) {
+  pdfUrl.value = url
+  showModal.value = true
+}
+function closePdf() {
+  pdfUrl.value = ''
+  showModal.value = false
+}
 </script>
