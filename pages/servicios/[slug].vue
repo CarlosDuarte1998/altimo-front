@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-blue-900 py-16 text-white">
+    <section class="bg-[#213364] py-16 text-white">
         <div class="container px-4 md:px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <div v-if="categoriesStore.isLoading" class="animate-pulse">

@@ -33,7 +33,7 @@ useHead({
     <div class="container px-4 md:px-6 max-w-[1300px] mx-auto text-center">
       <!-- Icono o ilustración -->
       <div class="mb-8">
-        <UIcon name="i-heroicons-exclamation-triangle" class="w-24 h-24 text-blue-600 mx-auto" />
+        <UIcon name="i-heroicons-exclamation-triangle" class="w-24 h-24 text-[#213364] mx-auto" />
       </div>
       
       <!-- Mensaje principal -->
@@ -49,7 +49,7 @@ useHead({
       <!-- Acción principal -->
       <NuxtLink 
         to="/"
-        class="inline-flex items-center justify-center rounded-md bg-blue-600 text-white hover:bg-blue-700 h-12 px-8 py-3 font-medium transition-colors min-h-[44px] mb-6"
+        class="inline-flex items-center justify-center rounded-md bg-[#213364] text-white hover:bg-blue-400 h-12 px-8 py-3 font-medium transition-colors min-h-[44px] mb-6"
         aria-label="Volver a la página principal de CIMRO"
       >
         <UIcon name="i-heroicons-home" class="mr-2 h-5 w-5" />
@@ -62,19 +62,19 @@ useHead({
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <NuxtLink 
             to="/servicios"
-            class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+            class="text-[#213364] hover:text-blue-400 hover:underline font-medium"
           >
             Ver nuestros servicios
           </NuxtLink>
           <NuxtLink 
             to="/contactanos"
-            class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+            class="text-[#213364] hover:text-blue-400 hover:underline font-medium"
           >
             Contactarnos
           </NuxtLink>
           <NuxtLink 
             to="/noticias"
-            class="text-blue-600 hover:text-blue-700 hover:underline font-medium"
+            class="text-[#213364] hover:text-blue-400 hover:underline font-medium"
           >
             Leer noticias
           </NuxtLink>

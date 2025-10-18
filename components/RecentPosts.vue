@@ -3,7 +3,7 @@
     <div class="container px-4 md:px-6 max-w-[1200px] mx-auto">
       <!-- Header -->
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+        <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl mb-4">
           {{ title }}
         </h2>
         <p v-if="subtitle" class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -48,7 +48,7 @@
       <div v-if="posts.length > 0 && showViewAllButton" class="text-center mt-12">
         <NuxtLink 
           to="/noticias"
-          class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-blue-900 hover:bg-blue-800 transition-colors"
+          class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-[#213364] hover:bg-blue-400 transition-colors"
         >
           {{ viewAllText }}
           <svg class="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

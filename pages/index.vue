@@ -56,7 +56,7 @@ const mainCategories = computed(() => {
 
       <div class="max-w-[1300px] m-auto py-5 mt-10">
          <div class="text-center">
-            <h1 class=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h1 class=" text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">
                Nuestros Servicios
             </h1>
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos servicios de laboratorio clínico, cirugías y hospitalización con altos estándares de calidad.</p>
@@ -70,7 +70,7 @@ const mainCategories = computed(() => {
                >
                   <!-- Header -->
                   <div class="flex flex-col space-y-1.5 p-6">
-                     <div class="text-xl font-semibold leading-tight tracking-tight">
+                     <div class="text-xl font-semibold leading-tight tracking-tight text-[#213364]">
                         {{ category?.name || 'Categoría' }}
                      </div>
                      <div class="text-sm text-muted-foreground">
@@ -81,7 +81,7 @@ const mainCategories = computed(() => {
                   <!-- Image and Description -->
                   <div class="p-6 pt-0">
                      <img 
-                        :alt="`Servicios de ${category?.name || 'diagnóstico por imagen'} en CIMRO El Salvador`" 
+                        :alt="`Servicios de ${category?.name || 'hospitalización'} en ALTIMO El Salvador`" 
                         loading="lazy" 
                         width="350" 
                         height="200"
@@ -120,9 +120,9 @@ const mainCategories = computed(() => {
 
             <div class="mt-10 text-center">
                <NuxtLink
-                  class="inline-flex items-center justify-center rounded-md bg-black text-white hover:bg-black/90 h-10 px-6 py-2 font-medium transition-colors min-h-[44px]"
+                  class="inline-flex items-center justify-center rounded-md bg-[#213364] text-white hover:bg-blue-400 h-10 px-6 py-2 font-medium transition-colors min-h-[44px]"
                   to="/servicios"
-                  aria-label="Ver todos los servicios médicos disponibles en CIMRO">Ver todos los servicios</NuxtLink>
+                  aria-label="Ver todos los servicios médicos disponibles en ALTIMO">Ver todos los servicios</NuxtLink>
             </div>
 
 
@@ -135,7 +135,7 @@ const mainCategories = computed(() => {
    <section class="bg-gray-50 py-16">
       <div class="container m-auto px-4 md:px-6 max-w-[1300px]">
          <div class="mb-12 text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">¿Por qué elegirnos?</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">¿Por qué elegirnos?</h2>
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">En Áltimo nos distinguimos por nuestro compromiso de brindar excelencia médica y calidad en cada servicio.</p>
          </div>
          
@@ -145,7 +145,7 @@ const mainCategories = computed(() => {
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-shield-check" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Confianza</h3>
+               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Confianza</h3>
                <p class="text-gray-600 text-sm leading-relaxed">Nuestro compromiso es generar confianza a cada paciente a través de un servicio seguro y de calidad.</p>
             </div>
 
@@ -154,7 +154,7 @@ const mainCategories = computed(() => {
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-heart" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Atención Humanizada</h3>
+               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Atención Humanizada</h3>
                <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal está comprometido con brindar un trato cálido y respetuoso a cada paciente.</p>
             </div>
 
@@ -163,7 +163,7 @@ const mainCategories = computed(() => {
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-academic-cap" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-gray-900">Profesionalismo</h3>
+               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Profesionalismo</h3>
                <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal se distingue por su profesionalismo y compromiso con la salud de cada paciente.</p>
             </div>
          </div>
@@ -174,7 +174,7 @@ const mainCategories = computed(() => {
    <section class="py-16 bg-white">
       <div class="container m-auto px-4 md:px-6 max-w-[1300px]">
          <div class="mb-12 text-center">
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Métodos de Pago</h2>
+            <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Métodos de Pago</h2>
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos múltiples opciones de pago para su comodidad y facilidad de acceso a nuestros servicios.</p>
          </div>
          
@@ -254,13 +254,13 @@ const mainCategories = computed(() => {
          <!-- Información adicional -->
          <div class="mt-12 text-center">
             <div class="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg border border-gray-200">
-               <h4 class="text-lg font-semibold text-gray-900 mb-3">Facilidades de Pago</h4>
+               <h4 class="text-lg font-semibold text-[#213364] mb-3">Facilidades de Pago</h4>
                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                  En CIMRO entendemos la importancia de hacer accesibles nuestros servicios médicos. Por eso ofrecemos diversas opciones de pago que se adaptan a sus necesidades.
+                  En ALTIMO entendemos la importancia de hacer accesibles nuestros servicios médicos. Por eso ofrecemos diversas opciones de pago que se adaptan a sus necesidades.
                </p>
                <div class="flex flex-col sm:flex-row gap-3 justify-center">
                   <a 
-                     class="inline-flex items-center justify-center rounded-md bg-blue-600 text-white hover:bg-blue-700 h-10 px-6 py-2 font-medium transition-colors"
+                     class="inline-flex items-center justify-center rounded-md bg-[#213364] text-white hover:bg-blue-400 h-10 px-6 py-2 font-medium transition-colors"
                      href="https://api.whatsapp.com/send/?phone=50377461474&text=Hola%2C+quisiera+informaci%C8%AFn+sobre+los+m%C3%A9todos+de+pago&type=phone_number&app_absent=0" 
                      target="_blank"
                   >
@@ -279,13 +279,13 @@ const mainCategories = computed(() => {
       </div>
    </section>
 
-   <section class="relative bg-gradient-to-r bg-[#003a73] py-20 text-white">
+   <section class="relative bg-gradient-to-r bg-[#213364] py-20 text-white">
       <div class="container relative z-10 px-4 md:px-6 m-auto">
          <div class="grid gap-6 md:grid-cols-2 md:gap-12">
             <div class="flex flex-col justify-center space-y-4">
                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Diagnóstico por imagen con
                   tecnología avanzada</h2>
-               <p class="max-w-[600px] text-blue-100 md:text-xl">En CIMRO combinamos la más alta tecnología con un
+               <p class="max-w-[600px] text-blue-100 md:text-xl">En ALTIMO combinamos la más alta tecnología con un
                   equipo médico especializado para ofrecerle un diagnóstico preciso y confiable.</p>
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
@@ -301,9 +301,9 @@ const mainCategories = computed(() => {
                   </NuxtLink>
                </div>
             </div>
-            <div class="flex items-center justify-center"><img alt="Equipo médico avanzado de CIMRO - Centro de diagnóstico por imagen en El Salvador" loading="lazy" width="500"
+            <div class="flex items-center justify-center"><img alt="Equipo médico avanzado de ALTIMO - Medical Center" loading="lazy" width="500"
                   height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover" style="color:transparent"
-                  src="https://admin-cimro.gunssoft.tech/wp-content/uploads/2025/07/PORTADA-scaled.jpg"></div>
+                  src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Fachada-1.png"></div>
          </div>
       </div>
       <div class="absolute inset-0 bg-blue-900/20 mix-blend-multiply"></div>
@@ -336,7 +336,7 @@ const mainCategories = computed(() => {
    <!-- Recent Posts Section -->
    <RecentPosts 
      title="Últimas Noticias"
-     subtitle="Mantente informado sobre las novedades y avances en CIMRO"
+     subtitle="Mantente informado sobre las novedades y avances en ALTIMO"
      :limit="3"
      :show-author="false"
      :show-reading-time="false"

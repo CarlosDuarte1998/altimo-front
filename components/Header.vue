@@ -73,7 +73,7 @@ const handleLogoClick = () => {
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/contactanos' }"
                     to="/contactanos">Contáctanos</NuxtLink>
-                <a class="items-center justify-center gap-2 rounded-md text-sm font-semibold h-10 px-4 py-2 hidden bg-[#001A70] hover:bg-blue-700 md:inline-flex text-white min-h-[44px]"
+                <a class="items-center justify-center gap-2 rounded-md text-sm font-semibold h-10 px-4 py-2 hidden bg-[#213364] hover:bg-blue-400 md:inline-flex text-white min-h-[44px]"
                     href="https://wa.me/50377461474?text=Hola,%20quisiera%20informaci%C8%AFn"
                     aria-label="Contactar por WhatsApp para información">
                     Iniciar Sesión

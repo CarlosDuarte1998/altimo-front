@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-blue-900 py-16 text-white">
+    <section class="bg-[#213364] py-16 text-white">
         <div class="container px-4 md:px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Nuestros Servicios</h1>
@@ -95,7 +95,7 @@
                         >
                             <!-- Header -->
                             <div class="flex flex-col space-y-1.5 p-6">
-                                <div class="text-xl font-semibold leading-tight tracking-tight">
+                                <div class="text-xl font-semibold leading-tight tracking-tight text-[#213364]">
                                     {{ category.name }}
                                 </div>
                                 <div class="text-sm text-muted-foreground">
@@ -144,7 +144,7 @@
     <section class="py-16 bg-gray-50">
         <div class="container max-w-[1300px] mx-auto px-4 md:px-6">
             <div class="mb-12 text-center">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Facilidades de Pago</h2>
+                <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Facilidades de Pago</h2>
                 <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos diversas opciones de pago para que pueda acceder fácilmente a nuestros servicios médicos especializados.</p>
             </div>
             
@@ -220,7 +220,7 @@
             <!-- Call to Action -->
             <div class="mt-16 text-center">
                 <div class="max-w-3xl mx-auto p-8 bg-white rounded-2xl shadow-sm border border-gray-200">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">¿Necesita información sobre nuestros métodos de pago?</h3>
+                    <h3 class="text-2xl font-bold text-[#213364] mb-4">¿Necesita información sobre nuestros métodos de pago?</h3>
                     <p class="text-gray-600 mb-8 leading-relaxed">
                         Nuestro equipo está listo para asesorarle sobre las mejores opciones de pago según sus necesidades. 
                         No permita que el aspecto financiero sea un obstáculo para cuidar su salud.

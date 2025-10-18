@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-blue-900 py-16 text-white">
+    <section class="bg-[#213364] py-16 text-white">
       <div class="container px-4 md:px-6">
         <div class="mx-auto max-w-3xl text-center">
           <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Noticias y Novedades</h1>
@@ -68,7 +68,7 @@
         <div v-if="postsStore.hasPosts">
           <!-- Posts Grid -->
           <div class="mb-8">
-            <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            <h2 class="text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
               {{ searchTerm ? `Resultados para "${searchTerm}"` : 'Todas las Noticias' }}
             </h2>
             <div class="h-[1px] w-full bg-gray-200 mt-4"></div>

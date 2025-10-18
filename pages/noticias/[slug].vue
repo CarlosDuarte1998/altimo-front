@@ -79,7 +79,7 @@
             </span>
           </div>
 
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+          <h1 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl mb-4">
             {{ post.title }}
           </h1>
 
@@ -207,7 +207,7 @@
     <!-- Related Posts -->
     <section v-if="relatedPosts.length > 0" class="py-16 bg-gray-50">
       <div class="container px-4 md:px-6 max-w-[1200px] mx-auto">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900 mb-8 text-center">
+        <h2 class="text-2xl font-bold tracking-tight text-[#213364] mb-8 text-center">
           Noticias Relacionadas
         </h2>
         
@@ -226,7 +226,7 @@
               >
             </div>
             <div class="p-4">
-              <h3 class="font-semibold text-gray-900 line-clamp-2 mb-2">
+              <h3 class="font-semibold text-[#213364] line-clamp-2 mb-2">
                 {{ relatedPost.title }}
               </h3>
               <p class="text-sm text-gray-600 line-clamp-2 mb-3">

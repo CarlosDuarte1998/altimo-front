@@ -139,7 +139,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <section class="bg-blue-900 py-16 text-white">
+  <section class="bg-[#213364] py-16 text-white">
     <div class="container px-4 md:px-6">
       <div class="mx-auto max-w-3xl text-center">
         <div v-if="!currentService" class="animate-pulse">
@@ -231,7 +231,7 @@ useSeoMeta({
                 <div data-orientation="horizontal" role="none"
                   class="shrink-0 bg-border border-gray-200 h-[1px] w-full"></div>
                 <div class="flex justify-center">
-                  <a class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-[#001871] text-white text-primary-foreground hover:bg-[#001871]/90 h-10 px-4 py-2 w-full"
+                  <a class="inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium bg-[#213364] text-white text-primary-foreground hover:bg-[#001871]/90 h-10 px-4 py-2 w-full"
                     :href="whatsappUrl" target="_blank">
                     <UIcon name="i-fa6-brands-whatsapp" class="size-5" />
                     Agendar Cita
@@ -437,7 +437,7 @@ useSeoMeta({
 
 <style scoped>
 .select-active {
-  background-color: #001871;
+  background-color: #213364;
   color: #fff;
   font-weight: 600;
 }

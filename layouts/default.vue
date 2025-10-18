@@ -27,7 +27,7 @@ useHead({
       <!-- Skip navigation link -->
       <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
       
-      <div class="py-1 bg-[#001A70] text-center text-[#d9d8dc]">
+      <div class="py-1 bg-[#213364] text-center text-[#d9d8dc]">
         <div class="container flex items-center justify-between px-4 md:px-6 max-w-[1380px] mx-auto">
           <div>
             <a href="https://maps.app.goo.gl/sVtSs3GtPaxTRJYo6" 

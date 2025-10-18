@@ -48,7 +48,7 @@
       </div>
 
       <!-- Title -->
-      <h3 class="text-lg font-semibold leading-tight text-gray-900 line-clamp-2 mb-3 group-hover:text-blue-900 transition-colors">
+      <h3 class="text-lg font-semibold leading-tight text-[#213364] line-clamp-2 mb-3 group-hover:text-blue-900 transition-colors">
         {{ post.title }}
       </h3>
 

@@ -1,6 +1,6 @@
 <template>
     <!-- Hero Section -->
-    <section class="bg-blue-900 py-16 text-white">
+    <section class="bg-[#213364] py-16 text-white">
         <div class="container px-4 md:px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Directorio Médico</h1>

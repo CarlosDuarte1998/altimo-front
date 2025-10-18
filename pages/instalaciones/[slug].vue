@@ -35,7 +35,7 @@
 
       <header class="py-12">
         <div class="container px-4 md:px-6 max-w-[1200px] mx-auto">
-          <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl md:text-5xl mb-6 text-center">
+          <h1 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl md:text-5xl mb-6 text-center">
             {{ instalacion.title }}
           </h1>
 
@@ -62,7 +62,7 @@
             <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
               Detalles
             </span>
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">
               Explora Nuestras Instalaciones
             </h2>
             <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
@@ -158,7 +158,7 @@
           <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
             Descubre más
           </span>
-          <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+          <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl mb-4">
             Otras Instalaciones
           </h2>
           <p class="text-gray-600 max-w-2xl mx-auto">

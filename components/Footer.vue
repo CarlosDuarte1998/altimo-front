@@ -35,7 +35,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
 </script>
 
 <template>
-    <footer class="bg-[#001A70] text-white">
+    <footer class="bg-[#213364] text-white">
         <div class="container m-auto px-4 py-12 md:px-6">
             <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                 <div class="space-y-4">
