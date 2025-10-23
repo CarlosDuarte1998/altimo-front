@@ -93,7 +93,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                             <a href="https://maps.app.goo.gl/sVtSs3GtPaxTRJYo6"
                                 class="flex items-center gap-2 transition-colors hover:text-white hover:underline"
                                 target="_blank" rel="noopener noreferrer"
-                                aria-label="Ver ubicación de ALTIMO en Google Maps">
+                                aria-label="Ver ubicación de ÁLTIMO en Google Maps">
                                 <UIcon name="i-lucide-map-pin" class="size-5" aria-hidden="true" />
                                 <span>{{ contactInfo.address }}</span>
                             </a>
@@ -102,7 +102,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                             <a :href="`tel:${contactInfo.phone}`"
                                 class="flex items-center gap-2 transition-colors hover:text-white hover:underline"
                                 target="_blank" rel="noopener noreferrer"
-                                :aria-label="`Llamar a ALTIMO al ${contactInfo.phone}`">
+                                :aria-label="`Llamar a ÁLTIMO al ${contactInfo.phone}`">
                                 <UIcon name="i-lucide-phone" class="size-5" aria-hidden="true" />
                                 <span>{{ contactInfo.phone }}</span>
                             </a>
@@ -111,7 +111,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                             <a :href="`mailto:${contactInfo.email}`"
                                 class="flex items-center gap-2 transition-colors hover:text-white hover:underline"
                                 target="_blank" rel="noopener noreferrer"
-                                :aria-label="`Enviar correo a ALTIMO a ${contactInfo.email}`">
+                                :aria-label="`Enviar correo a ÁLTIMO a ${contactInfo.email}`">
                                 <UIcon name="i-lucide-mail" class="size-5" aria-hidden="true" />
                                 <span>{{ contactInfo.email }}</span>
                             </a>
@@ -130,23 +130,23 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                     <div class="flex gap-4">
                         <a class="text-white transition-colors hover:text-white" :href="socialMediaLinks.facebook"
                             v-if="socialMediaLinks.facebook" target="_blank" rel="noopener noreferrer"
-                            aria-label="Seguir a ALTIMO en Facebook">
+                            aria-label="Seguir a ÁLTIMO en Facebook">
                             <UIcon name="i-fa6-brands-facebook" class="size-5" aria-hidden="true" />
                         </a>
                         <a class="text-white transition-colors hover:text-white"
                             :href="socialMediaLinks.instagram" v-if="socialMediaLinks.instagram" target="_blank" rel="noopener noreferrer"
-                            aria-label="Seguir a ALTIMO en Instagram">
+                            aria-label="Seguir a ÁLTIMO en Instagram">
                             <UIcon name="i-fa6-brands-instagram" class="size-5" aria-hidden="true" />
                         </a>
                         <a class="text-white transition-colors hover:text-white" :href="socialMediaLinks.twitter"
                             v-if="socialMediaLinks.twitter" target="_blank" rel="noopener noreferrer"
-                            aria-label="Seguir a ALTIMO en Twitter">
+                            aria-label="Seguir a ÁLTIMO en Twitter">
                             <UIcon name="i-fa6-brands-twitter" class="size-5" aria-hidden="true" />
                         </a>
 
                         <a class="text-white transition-colors hover:text-white" :href="socialMediaLinks.youtube"
                             v-if="socialMediaLinks.youtube" target="_blank" rel="noopener noreferrer"
-                            aria-label="Suscribirse al canal de YouTube de ALTIMO">
+                            aria-label="Suscribirse al canal de YouTube de ÁLTIMO">
                             <UIcon name="i-fa6-brands-youtube" class="size-5" aria-hidden="true" />
                         </a>
                         <!-- whatsapp -->
@@ -154,7 +154,7 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
 
                         <a class="text-white transition-colors hover:text-white" :href="socialMediaLinks.whatsapp"
                             v-if="socialMediaLinks.whatsapp" target="_blank" rel="noopener noreferrer"
-                            aria-label="Contactar a ALTIMO por WhatsApp">
+                            aria-label="Contactar a ÁLTIMO por WhatsApp">
                             <UIcon name="i-fa6-brands-whatsapp" class="size-5" aria-hidden="true" />
                         </a>
 
