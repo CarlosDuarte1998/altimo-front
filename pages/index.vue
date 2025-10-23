@@ -283,10 +283,8 @@ const mainCategories = computed(() => {
       <div class="container relative z-10 px-4 md:px-6 m-auto">
          <div class="grid gap-6 md:grid-cols-2 md:gap-12">
             <div class="flex flex-col justify-center space-y-4">
-               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Diagnóstico por imagen con
-                  tecnología avanzada</h2>
-               <p class="max-w-[600px] text-blue-100 md:text-xl">En ALTIMO combinamos la más alta tecnología con un
-                  equipo médico especializado para ofrecerle un diagnóstico preciso y confiable.</p>
+               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Tu salud en manos de profesionales comprometidos</h2>
+               <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ALTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p>
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
                      href="https://api.whatsapp.com/send/?phone=50377461474&text=Hola%2C+quisiera+informaci%C8%AFn&type=phone_number&app_absent=0" target="_blank">
