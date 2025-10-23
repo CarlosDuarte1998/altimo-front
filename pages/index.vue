@@ -81,7 +81,7 @@ const mainCategories = computed(() => {
                   <!-- Image and Description -->
                   <div class="p-6 pt-0">
                      <img 
-                        :alt="`Servicios de ${category?.name || 'hospitalización'} en ALTIMO El Salvador`" 
+                        :alt="`Servicios de ${category?.name || 'hospitalización'} en ÁLTIMO El Salvador`" 
                         loading="lazy" 
                         width="350" 
                         height="200"
@@ -122,7 +122,7 @@ const mainCategories = computed(() => {
                <NuxtLink
                   class="inline-flex items-center justify-center rounded-md bg-[#213364] text-white hover:bg-blue-400 h-10 px-6 py-2 font-medium transition-colors min-h-[44px]"
                   to="/servicios"
-                  aria-label="Ver todos los servicios médicos disponibles en ALTIMO">Ver todos los servicios</NuxtLink>
+                  aria-label="Ver todos los servicios médicos disponibles en ÁLTIMO">Ver todos los servicios</NuxtLink>
             </div>
 
 
@@ -256,7 +256,7 @@ const mainCategories = computed(() => {
             <div class="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg border border-gray-200">
                <h4 class="text-lg font-semibold text-[#213364] mb-3">Facilidades de Pago</h4>
                <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                  En ALTIMO entendemos la importancia de hacer accesibles nuestros servicios médicos. Por eso ofrecemos diversas opciones de pago que se adaptan a sus necesidades.
+                  En <b>ÁLTIMO</b> entendemos la importancia de hacer accesibles nuestros servicios médicos. Por eso ofrecemos diversas opciones de pago que se adaptan a sus necesidades.
                </p>
                <div class="flex flex-col sm:flex-row gap-3 justify-center">
                   <a 
@@ -284,7 +284,7 @@ const mainCategories = computed(() => {
          <div class="grid gap-6 md:grid-cols-2 md:gap-12">
             <div class="flex flex-col justify-center space-y-4">
                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Tu salud en manos de profesionales comprometidos</h2>
-               <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ALTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p>
+               <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ÁLTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p>
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
                      href="https://api.whatsapp.com/send/?phone=50377461474&text=Hola%2C+quisiera+informaci%C8%AFn&type=phone_number&app_absent=0" target="_blank">
@@ -299,7 +299,7 @@ const mainCategories = computed(() => {
                   </NuxtLink>
                </div>
             </div>
-            <div class="flex items-center justify-center"><img alt="Equipo médico avanzado de ALTIMO - Medical Center" loading="lazy" width="500"
+            <div class="flex items-center justify-center"><img alt="Equipo médico avanzado de ÁLTIMO - Medical Center" loading="lazy" width="500"
                   height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover" style="color:transparent"
                   src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Fachada-1.png"></div>
          </div>
@@ -334,7 +334,7 @@ const mainCategories = computed(() => {
    <!-- Recent Posts Section -->
    <RecentPosts 
      title="Últimas Noticias"
-     subtitle="Mantente informado sobre las novedades y avances en ALTIMO"
+     subtitle="Mantente informado sobre las novedades y avances en ÁLTIMO"
      :limit="3"
      :show-author="false"
      :show-reading-time="false"
