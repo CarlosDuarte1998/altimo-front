@@ -1,8 +1,8 @@
 export const useALTIMOSEO = () => {
   // Información corporativa de CIMRO
   const corporateInfo = {
-    name: 'ALTIMO - MEDICAL CENTER',
-    shortName: 'ALTIMO',
+    name: 'ÁLTIMO - MEDICAL CENTER',
+    shortName: 'ÁLTIMO',
     location: 'Santa Ana, El Salvador',
     address: 'Entre, 23 Calle Oriente, Avenida Independencia Sur, Santa Ana CP 2201',
     phone: '+503 2401-2800',
@@ -13,7 +13,7 @@ export const useALTIMOSEO = () => {
 
   // Palabras clave SEO principales
   const mainKeywords = [
-    'ALTIMO',
+    'ÁLTIMO',
     'Centro de Imágenes Radiológicas de Occidente',
     'Santa Ana',
     'tomografía computarizada Santa Ana',
