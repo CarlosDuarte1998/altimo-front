@@ -106,12 +106,12 @@
                   :class="{ 'md:order-1': index % 2 === 1 }"
                 >
                   <div>
-                    <div class="flex items-center gap-4 mb-3">
+                    <!-- <div class="flex items-center gap-4 mb-3">
                       <div class="h-1 w-12 bg-blue-600 rounded-full"></div>
                       <span class="text-sm font-semibold text-blue-600 uppercase tracking-wider">
                         Nivel {{ index + 1 }}
                       </span>
-                    </div>
+                    </div> -->
                     <h3 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight">
                       {{ nivel.titulo }}
                     </h3>
@@ -135,6 +135,8 @@
         </div>
       </section>
 
+
+      
       <section class="py-8">
         <div class="container px-4 md:px-6 max-w-[1200px] mx-auto">
           <div class="flex justify-center">
@@ -154,7 +156,7 @@
 
     <section v-if="relatedInstalaciones.length > 0" class="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div class="container px-4 md:px-6 max-w-[1200px] mx-auto">
-        <div class="text-center mb-12">
+        <!-- <div class="text-center mb-12">
           <span class="inline-block px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium mb-4">
             Descubre más
           </span>
@@ -164,7 +166,7 @@
           <p class="text-gray-600 max-w-2xl mx-auto">
             Explora nuestras otras instalaciones diseñadas para brindarte la mejor atención médica
           </p>
-        </div>
+        </div> -->
         
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <NuxtLink

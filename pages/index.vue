@@ -140,6 +140,16 @@ const mainCategories = computed(() => {
          </div>
          
          <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Excelencia -->
+            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+               <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
+                  <!-- <UIcon name="i-heroicons-heart" class="w-8 h-8 text-blue-600" /> -->
+                  <UIcon name="ri:medal-line" class="w-8 h-8 text-blue-600" />
+               </div>
+               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Excelencia</h3>
+               <p class="text-gray-600 text-sm leading-relaxed">Mantenemos un compromiso constante con la excelencia en cada detalle.</p>
+            </div>
+
             <!-- CONFIANZA -->
             <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
@@ -149,22 +159,15 @@ const mainCategories = computed(() => {
                <p class="text-gray-600 text-sm leading-relaxed">Nuestro compromiso es generar confianza a cada paciente a través de un servicio seguro y de calidad.</p>
             </div>
 
-            <!-- Atención Humanizada -->
+            
+
+            <!-- Atención especial -->
             <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
                <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
                   <UIcon name="i-heroicons-heart" class="w-8 h-8 text-blue-600" />
                </div>
-               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Atención Humanizada</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal está comprometido con brindar un trato cálido y respetuoso a cada paciente.</p>
-            </div>
-
-            <!-- Profesionalismo -->
-            <div class="flex flex-col items-center text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
-               <div class="mb-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
-                  <UIcon name="i-heroicons-academic-cap" class="w-8 h-8 text-blue-600" />
-               </div>
-               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Profesionalismo</h3>
-               <p class="text-gray-600 text-sm leading-relaxed">Nuestro personal se distingue por su profesionalismo y compromiso con la salud de cada paciente.</p>
+               <h3 class="mb-3 text-xl font-semibold text-[#213364]">Atención especial</h3>
+               <p class="text-gray-600 text-sm leading-relaxed">Brindamos una atención orientada al bienestar y adaptada a las necesidades de cada paciente.</p>
             </div>
          </div>
       </div>
@@ -178,80 +181,94 @@ const mainCategories = computed(() => {
             <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos múltiples opciones de pago para su comodidad y facilidad de acceso a nuestros servicios.</p>
          </div>
          
-         <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-            <!-- Tasa 0 -->
-            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-green-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-               <div class="relative z-10">
-                  <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                     <UIcon name="i-heroicons-percent-badge" class="w-8 h-8 text-white" />
-                  </div>
-                  <h3 class="mb-4 text-2xl font-bold">Tasa 0%</h3>
-                  <p class="text-green-100 mb-6 leading-relaxed">Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.</p>
-                  <div class="mt-auto">
-                     <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                        Sin Intereses
-                     </span>
-                  </div>
-               </div>
-               <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            </div>
+      
+<div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+  <!-- Tasa 0 -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="i-heroicons-percent-badge" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Tasa 0%</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Sin Intereses
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-            <!-- Tarjetas de Crédito y Débito -->
-            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-               <div class="relative z-10">
-                  <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                     <UIcon name="i-heroicons-credit-card" class="w-8 h-8 text-white" />
-                  </div>
-                  <h3 class="mb-4 text-2xl font-bold">Tarjetas</h3>
-                  <p class="text-blue-100 mb-6 leading-relaxed">Aceptamos tarjetas de crédito y débito, tanto nacionales como internacionales.</p>
-                  <div class="mt-auto flex flex-wrap gap-2">
-                     <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
-                        Nacional
-                     </span>
-                     <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
-                        Internacional
-                     </span>
-                  </div>
-               </div>
-               <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            </div>
+  <!-- Tarjetas de Crédito y Débito -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="i-heroicons-credit-card" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Tarjetas</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Aceptamos tarjetas de crédito y débito, tanto nacionales como internacionales.
+      </p>
+      <div class="mt-auto flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+          Nacional
+        </span>
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+          Internacional
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-            <!-- Transferencias -->
-            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-               <div class="relative z-10">
-                  <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                     <UIcon name="solar:card-transfer-broken" class="w-8 h-8 text-white" />
-                  </div>
-                  <h3 class="mb-4 text-2xl font-bold">Transferencias nacionales e internacionales</h3>
-                  <p class="text-purple-100 mb-6 leading-relaxed">Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.</p>
-                  <div class="mt-auto">
-                     <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                        Seguro y Confiable
-                     </span>
-                  </div>
-               </div>
-               <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            </div>
+  <!-- Transferencias -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="solar:card-transfer-broken" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">
+        Transferencias nacionales e internacionales
+      </h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Seguro y Confiable
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-            <!-- Certificado Prepago -->
-            <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-               <div class="relative z-10">
-                  <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                     <UIcon name="nimbus:gift-card" class="w-8 h-8 text-white" />
-                  </div>
-                  <h3 class="mb-4 text-2xl font-bold">Certificado prepago</h3>
-                  <p class="text-orange-100 mb-6 leading-relaxed">Pago con certificado de regalo mediante código o enlace.</p>
-                  <div class="mt-auto">
-                     <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                        Seguro y Confiable
-                     </span>
-                  </div>
-               </div>
-               <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-            </div>
-         </div>
+  <!-- Certificado Prepago -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="nimbus:gift-card" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Certificado prepago</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Pago con certificado de regalo mediante código o enlace.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Seguro y Confiable
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
+</div>
 
-         <!-- Información adicional -->
+
+
+
+         <!-- Información adicional
          <div class="mt-12 text-center">
             <div class="max-w-2xl mx-auto p-6 bg-gray-50 rounded-lg border border-gray-200">
                <h4 class="text-lg font-semibold text-[#213364] mb-3">Facilidades de Pago</h4>
@@ -275,7 +292,7 @@ const mainCategories = computed(() => {
                   </NuxtLink>
                </div>
             </div>
-         </div>
+         </div> -->
       </div>
    </section>
 
@@ -283,8 +300,8 @@ const mainCategories = computed(() => {
       <div class="container relative z-10 px-4 md:px-6 m-auto">
          <div class="grid gap-6 md:grid-cols-2 md:gap-12">
             <div class="flex flex-col justify-center space-y-4">
-               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Tu salud en manos de profesionales comprometidos</h2>
-               <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ÁLTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p>
+               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl">LO MEJOR PARA TU SALUD</h2>
+               <!-- <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ÁLTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p> -->
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
                      href="https://api.whatsapp.com/send/?phone=50377461474&text=Hola%2C+quisiera+informaci%C8%AFn&type=phone_number&app_absent=0" target="_blank">

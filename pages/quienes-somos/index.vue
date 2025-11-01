@@ -4,7 +4,7 @@
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Quiénes Somos</h1>
                 <p class="mt-4 text-blue-100 md:text-xl">Conoce más sobre <b>ÁLTIMO</b>, nuestro compromiso con la
-                    excelencia médica y la atención humanizada.</p>
+                    excelencia y la atención especial.</p>
             </div>
         </div>
     </section>
@@ -17,12 +17,12 @@
                     <div class="space-y-4 text-gray-600 text-lg">
                         <p>Áltimo Medical Center nació hace tres años con el propósito de revolucionar la atención
                             médica en el occidente del país. Desde sus inicios, este espacio fue creado para unir
-                            innovación, excelencia y un trato humanizado, reflejando en cada detalle un compromiso
-                            genuino con el bienestar y la tranquilidad de cada paciente.<br><br> Nuestro mayor
-                            diferenciador
-                            es el equipo humano: médicos y especialistas comprometidos que combinan tecnología avanzada
-                            con atención cálida y personalizada. Áltimo es más que un centro de salud; es un lugar donde
-                            la confianza, la compañía y la esperanza se unen para cuidar de cada historia.</p>
+                            innovación, excelencia y una atención especial, reflejando en cada detalle un compromiso
+                            genuino con el bienestar y la tranquilidad de cada paciente.
+                            .<br><br> Nuestro mayor diferenciador es el equipo de médicos y especialistas comprometidos
+                            que combinan tecnología avanzada con atención cálida y personalizada. Áltimo es más que un
+                            centro de salud; es un lugar donde la confianza, la compañía y la esperanza se unen para
+                            cuidar de cada historia.</p>
                     </div>
                 </div>
                 <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
@@ -113,8 +113,8 @@
                     <p class="text-sm text-gray-500">Presidente</p>
                     <p class="mt-2 text-sm text-gray-600 text-justify">
                         Doctor en Cirugía Dental y Empresario con amplia trayectoria en el sector salud. Fundador del
-                        Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Centro
-                        Médico Áltimo.
+                        Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Áltimo
+                        Medical Center.
                     </p>
                 </div>
 
@@ -172,7 +172,7 @@
 
     <!--INSTALACIONES-->
 
-    <section class="bg-gray-50 py-16">
+    <!-- <section class="bg-gray-50 py-16">
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="mb-12 text-center" id="instalaciones">
                 <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Nuestras Instalaciones</h2>
@@ -250,7 +250,126 @@
                 </NuxtLink>
             </div>
         </div>
-    </section>
+    </section> -->
+
+
+
+    <!-- 3333 -->
+    <section class="bg-gray-50 py-16">
+  <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
+    <!-- Título -->
+    <div class="mb-12 text-center" id="instalaciones">
+      <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">
+        Nuestras Instalaciones
+      </h2>
+      <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
+        Contamos con instalaciones modernas y equipadas con la más alta tecnología
+        para brindarle el mejor servicio.
+      </p>
+    </div>
+
+    <!-- Loader -->
+    <div v-if="LoadingInstalaciones" class="text-center py-8">
+      <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-900 mx-auto"></div>
+      <p class="mt-4 text-gray-600">Cargando instalaciones...</p>
+    </div>
+
+    <!-- Grid de instalaciones -->
+    <div v-else class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <NuxtLink
+        v-for="instalacion in instalaciones"
+        :key="instalacion.id"
+        :to="`/instalaciones/${instalacion.slug}`"
+        class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+      >
+        <!-- Carrusel de imágenes de niveles -->
+        <div class="relative h-[280px] overflow-hidden">
+          <img
+            v-if="instalacion.niveles.length > 0"
+            :src="instalacion.niveles[currentSlide[instalacion.id] || 0].imagen_url || '/placeholder.svg'"
+            :alt="instalacion.niveles[currentSlide[instalacion.id] || 0].titulo"
+            class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
+          />
+
+          <!-- Botones prev/next -->
+          <button
+            v-if="instalacion.niveles.length > 1"
+            @click.stop.prevent="prevSlide(instalacion.id, instalacion.niveles.length)"
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-2 rounded-full hover:bg-white/30 transition"
+          >
+            ‹
+          </button>
+          <button
+            v-if="instalacion.niveles.length > 1"
+            @click.stop.prevent="nextSlide(instalacion.id, instalacion.niveles.length)"
+            class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-2 rounded-full hover:bg-white/30 transition"
+          >
+            ›
+          </button>
+
+          <!-- Degradado y título -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"
+          ></div>
+
+          <div
+            class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
+          >
+            <div class="flex items-center justify-between mb-2">
+              <span
+                class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full"
+              >
+                Ver detalles
+              </span>
+            </div>
+            <h3
+              class="text-xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors duration-300"
+            >
+              {{ instalacion.title }}
+            </h3>
+          </div>
+        </div>
+
+        <!-- Descripción -->
+        <div class="p-5">
+          <p class="text-gray-600 text-sm line-clamp-2 leading-relaxed">
+            {{ instalacion.descripcion }}
+          </p>
+
+          <div
+            class="mt-4 flex items-center text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors"
+          >
+            <span>Explorar instalación</span>
+            <svg
+              class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Icono ojo -->
+        <div
+          class="absolute top-4 right-4 w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100"
+        >
+          <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+          </svg>
+        </div>
+      </NuxtLink>
+    </div>
+  </div>
+</section>
+
+
 
 
     <!--CERTIFICACIONES Y APROBACIONES-->
@@ -368,6 +487,8 @@ const { corporateInfo, getKeywordsString, generateDescription } = useALTIMOSEO()
 const { fetchInstalaciones, processInstalacion } = useInstalaciones();
 const showModal = ref(false)
 const pdfUrl = ref('')
+import type { Ref } from 'vue'
+import { ref } from 'vue'
 
 // Estado para instalaciones
 const instalaciones = ref<any[]>([]);
@@ -377,14 +498,14 @@ const loadingInstalaciones = ref(true);
 onMounted(async () => {
     try {
         const rawInstalaciones = await fetchInstalaciones();
-        
+
         // Procesar cada instalación para obtener URLs de imágenes
         const processed = await Promise.all(
             rawInstalaciones.map(inst => processInstalacion(inst))
         );
-        
+
         instalaciones.value = processed;
-        
+
         // Guardar en estado global para uso en páginas de detalle
         useState('allInstalaciones', () => processed);
     } catch (error) {
@@ -436,11 +557,63 @@ useHead({
     ]
 });
 function openPdf(url: string) {
-  pdfUrl.value = url
-  showModal.value = true
+    pdfUrl.value = url
+    showModal.value = true
 }
 function closePdf() {
-  pdfUrl.value = ''
-  showModal.value = false
+    pdfUrl.value = ''
+    showModal.value = false
+}
+
+import { onMounted, onBeforeUnmount } from 'vue'
+
+const slideInterval = 3000 // cada 5 segundos
+let intervalTimers: Record<number, number> = {}
+
+// Iniciar autoplay
+onMounted(() => {
+  instalaciones.value.forEach((instalacion) => {
+    // Solo si tiene más de una imagen
+    if (instalacion.niveles.length > 1) {
+      intervalTimers[instalacion.id] = window.setInterval(() => {
+        nextSlide(instalacion.id, instalacion.niveles.length)
+      }, slideInterval)
+    }
+  })
+})
+
+// Limpiar intervalos al desmontar
+onBeforeUnmount(() => {
+  Object.values(intervalTimers).forEach((id) => clearInterval(id))
+})
+interface Nivel {
+  titulo: string
+  imagen_url: string
+}
+
+interface Instalacion {
+  id: number
+  title: string
+  slug: string
+  descripcion: string
+  niveles: Nivel[]
+}
+
+//const instalaciones: Ref<Instalacion[]> = ref([])
+//const loadingInstalaciones = ref(true)
+instalaciones.value = []
+loadingInstalaciones.value = true
+
+// Control de slide por instalación
+const currentSlide: Ref<Record<number, number>> = ref({})
+
+const nextSlide = (id: number, total: number): void => {
+  if (!currentSlide.value[id]) currentSlide.value[id] = 0
+  currentSlide.value[id] = (currentSlide.value[id] + 1) % total
+}
+
+const prevSlide = (id: number, total: number): void => {
+  if (!currentSlide.value[id]) currentSlide.value[id] = 0
+  currentSlide.value[id] = (currentSlide.value[id] - 1 + total) % total
 }
 </script>

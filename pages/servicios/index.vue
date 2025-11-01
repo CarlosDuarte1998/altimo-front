@@ -148,77 +148,92 @@
                 <p class="mx-auto mt-4 max-w-[700px] text-gray-500">Ofrecemos diversas opciones de pago para que pueda acceder fácilmente a nuestros servicios médicos especializados.</p>
             </div>
             
-            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-                <!-- Tasa 0 -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-500 to-green-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div class="relative z-10">
-                        <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                            <UIcon name="i-heroicons-percent-badge" class="w-8 h-8 text-white" />
-                        </div>
-                        <h3 class="mb-4 text-2xl font-bold">Tasa 0%</h3>
-                        <p class="text-green-100 mb-6 leading-relaxed">Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.</p>
-                        <div class="mt-auto">
-                            <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                                Sin Intereses
-                            </span>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                </div>
+           <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+  <!-- Tasa 0 -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="i-heroicons-percent-badge" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Tasa 0%</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Financiamiento sin intereses para hacer más accesibles nuestros servicios médicos.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Sin Intereses
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-                <!-- Tarjetas de Crédito y Débito -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div class="relative z-10">
-                        <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                            <UIcon name="i-heroicons-credit-card" class="w-8 h-8 text-white" />
-                        </div>
-                        <h3 class="mb-4 text-2xl font-bold">Tarjetas</h3>
-                        <p class="text-blue-100 mb-6 leading-relaxed">Aceptamos tarjetas de crédito y débito, tanto nacionales como internacionales.</p>
-                        <div class="mt-auto flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">Nacional</span>
-                            <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">Internacional</span>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                </div>
+  <!-- Tarjetas de Crédito y Débito -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="i-heroicons-credit-card" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Tarjetas</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Aceptamos tarjetas de crédito y débito, tanto nacionales como internacionales.
+      </p>
+      <div class="mt-auto flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+          Nacional
+        </span>
+        <span class="px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-medium">
+          Internacional
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-                <!-- Transferencias -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div class="relative z-10">
-                        <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                            <UIcon name="solar:card-transfer-broken" class="w-8 h-8 text-white" />
-                        </div>
-                        <h3 class="mb-4 text-2xl font-bold">Transferencias nacionales e internacionales</h3>
-                        <p class="text-purple-100 mb-6 leading-relaxed">Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.</p>
-                        <div class="mt-auto">
-                            <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                                Seguro y Confiable
-                            </span>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                </div>
+  <!-- Transferencias -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="solar:card-transfer-broken" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">
+        Transferencias nacionales e internacionales
+      </h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Aceptamos transferencias bancarias nacionales e internacionales para tu mayor comodidad.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Seguro y Confiable
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
 
-                <!-- Certificado Prepago -->
-                <div class="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 p-8 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <div class="relative z-10">
-                        <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
-                            <UIcon name="nimbus:gift-card" class="w-8 h-8 text-white" />
-                        </div>
-                        <h3 class="mb-4 text-2xl font-bold">Certificado prepago</h3>
-                        <p class="text-orange-100 mb-6 leading-relaxed">Pago con certificado de regalo mediante código o enlace.</p>
-                        <div class="mt-auto">
-                            <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
-                                Seguro y Confiable
-                            </span>
-                        </div>
-                    </div>
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                </div>
-            </div>
+  <!-- Certificado Prepago -->
+  <div class="group relative overflow-hidden rounded-2xl bg-[#213364] p-8 text-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+    <div class="relative z-10">
+      <div class="mb-6 w-16 h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center">
+        <UIcon name="nimbus:gift-card" class="w-8 h-8 text-white" />
+      </div>
+      <h3 class="mb-4 text-2xl font-bold text-white">Certificado prepago</h3>
+      <p class="text-white/80 mb-6 leading-relaxed">
+        Pago con certificado de regalo mediante código o enlace.
+      </p>
+      <div class="mt-auto">
+        <span class="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+          Seguro y Confiable
+        </span>
+      </div>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
+  </div>
+</div>
+
 
             <!-- Call to Action -->
-            <div class="mt-16 text-center">
+            <!-- <div class="mt-16 text-center">
                 <div class="max-w-3xl mx-auto p-8 bg-white rounded-2xl shadow-sm border border-gray-200">
                     <h3 class="text-2xl font-bold text-[#213364] mb-4">¿Necesita información sobre nuestros métodos de pago?</h3>
                     <p class="text-gray-600 mb-8 leading-relaxed">
@@ -243,7 +258,7 @@
                         </NuxtLink>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 

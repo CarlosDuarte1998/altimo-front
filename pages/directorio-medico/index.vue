@@ -5,8 +5,7 @@
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Directorio Médico</h1>
                 <p class="mt-4 text-blue-100 md:text-xl">
-                    Conoce a nuestro equipo de profesionales médicos especializados, comprometidos con la
-                    excelencia médica y la atención humanizada en <b>ÁLTIMO</b>.
+                    Conoce a nuestros profesionales médicos aliados, comprometidos con la excelencia, brindan confianza y atención especial.
                 </p>
             </div>
         </div>
