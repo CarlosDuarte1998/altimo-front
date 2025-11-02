@@ -14,6 +14,40 @@
     <!-- Médicos Section -->
     <section class="py-16">
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
+            <!-- Barra de Búsqueda -->
+            <div class="mb-8">
+                <div class="relative max-w-md mx-auto">
+                    <input
+                        v-model="searchTerm"
+                        @input="handleSearch"
+                        type="text"
+                        placeholder="Buscar por nombre o especialidad..."
+                        class="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base"
+                    >
+                    <UIcon 
+                        name="i-heroicons-magnifying-glass" 
+                        class="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" 
+                    />
+                    <button
+                        v-if="searchTerm"
+                        @click="clearSearch"
+                        class="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
+                    >
+                        <UIcon name="i-heroicons-x-mark" class="h-4 w-4 text-gray-400" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- Título de Resultados -->
+            <div v-if="medicosStore.hasMedicos" class="mb-8">
+                <h2 class="text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
+                    {{ searchTerm ? `Resultados para "${searchTerm}"` : 'Nuestro Equipo Médico' }}
+                </h2>
+                <p v-if="filteredMedicos.length > 0" class="text-gray-600 mt-2">
+                    {{ filteredMedicos.length }} {{ filteredMedicos.length === 1 ? 'médico encontrado' : 'médicos encontrados' }}
+                </p>
+                <div class="h-[1px] w-full bg-gray-200 mt-4"></div>
+            </div>
 
             <!-- Estado de Carga -->
             <div v-if="medicosStore.isLoading" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -42,9 +76,19 @@
                 <p class="text-gray-600">El directorio médico estará disponible pronto.</p>
             </div>
 
+            <!-- Sin Resultados -->
+            <div v-if="searchTerm && filteredMedicos.length === 0 && !medicosStore.isLoading" class="text-center py-12">
+                <UIcon name="i-heroicons-magnifying-glass" class="text-gray-400 text-5xl mb-4" />
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">Sin resultados</h3>
+                <p class="text-gray-600 mb-4">No encontramos médicos que coincidan con "{{ searchTerm }}"</p>
+                <UButton @click="clearSearch" color="primary" variant="outline">
+                    Mostrar todos los médicos
+                </UButton>
+            </div>
+
             <!-- Grid de Médicos -->
-            <div v-else class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-                <div v-for="medico in (medicosStore.medicosByName as Medico[])" :key="medico.id"
+            <div v-else-if="filteredMedicos.length > 0" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                <div v-for="medico in filteredMedicos" :key="medico.id"
                     class="text-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                     <!-- Imagen del Médico -->
                     <div
@@ -59,7 +103,7 @@
                     </h3>
 
                     <p class="text-sm font-medium text-blue-600 mt-1">
-                        {{ medico.especialidad }}
+                        {{ getEspecialidadName(medico) }}
                     </p>
 
                     <!-- Botón Ver Perfil -->
@@ -75,7 +119,7 @@
     <!-- Modal del Médico -->
     <UModal v-model:open="isModalOpen"
         :title="selectedMedico ? selectedMedico.nombre : 'Perfil Médico'"
-        :description="selectedMedico ? selectedMedico.especialidad : ''" :ui="{
+        :description="selectedMedico ? getEspecialidadName(selectedMedico) : ''" :ui="{
             content: 'w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
             body: 'max-h-[calc(100dvh-16rem)] overflow-y-auto modal-body-scroll'
         }">
@@ -93,7 +137,7 @@
                     <div class="flex-1 text-center sm:text-left">
                         <h2 class="text-2xl font-bold text-gray-900">{{ selectedMedico.nombre }}</h2>
                         <p class="text-lg text-blue-600 font-medium mt-1">
-                            {{ selectedMedico.especialidad }}
+                            {{ getEspecialidadName(selectedMedico) }}
                         </p>
 
                         <!-- Información de Contacto -->
@@ -225,9 +269,63 @@ interface Medico {
 const { corporateInfo, getKeywordsString, generateDescription } = useALTIMOSEO()
 const medicosStore = useMedicosStore()
 
-// Estado para el modal
+// Estado para búsqueda y modal
+const searchTerm = ref('')
+const searchTimeout = ref<NodeJS.Timeout | null>(null)
 const isModalOpen = ref(false)
 const selectedMedico = ref<Medico | null>(null)
+
+// Función para normalizar texto (remover acentos y convertir a minúsculas)
+const normalizeText = (text: string): string => {
+    return text
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '') // Remover acentos
+        .replace(/[^a-z0-9\s]/g, '') // Remover caracteres especiales
+        .trim()
+}
+
+// Función para obtener el nombre de la especialidad 
+const getEspecialidadName = (medico: Medico) => {
+    return medico.especialidad || 'Especialidad no especificada'
+}
+
+// Computed para médicos filtrados
+const filteredMedicos = computed(() => {
+    if (!searchTerm.value.trim()) {
+        return medicosStore.medicosByName as Medico[]
+    }
+    
+    const normalizedTerm = normalizeText(searchTerm.value)
+    const searchWords = normalizedTerm.split(' ').filter(word => word.length > 0)
+    
+    return (medicosStore.medicosByName as Medico[]).filter(medico => {
+        const normalizedNombre = normalizeText(medico.nombre)
+        const normalizedEspecialidad = normalizeText(getEspecialidadName(medico))
+        const fullText = `${normalizedNombre} ${normalizedEspecialidad}`
+        
+        // Buscar si todas las palabras están presentes en el texto completo
+        return searchWords.every(word => 
+            fullText.includes(word)
+        )
+    })
+})
+
+// Función de búsqueda con debounce
+const handleSearch = () => {
+    if (searchTimeout.value) {
+        clearTimeout(searchTimeout.value)
+    }
+    
+    searchTimeout.value = setTimeout(() => {
+        // La búsqueda se maneja automáticamente con el computed filteredMedicos
+    }, 300)
+}
+
+// Limpiar búsqueda
+const clearSearch = () => {
+    searchTerm.value = ''
+}
 
 // Cargar médicos al montar el componente
 onMounted(async () => {
@@ -246,6 +344,13 @@ watch(isModalOpen, (newValue) => {
         setTimeout(() => {
             selectedMedico.value = null
         }, 300)
+    }
+})
+
+// Limpiar timeout al desmontar
+onBeforeUnmount(() => {
+    if (searchTimeout.value) {
+        clearTimeout(searchTimeout.value)
     }
 })
 

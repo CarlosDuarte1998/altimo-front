@@ -40,12 +40,11 @@ export const useMedicosStore = defineStore('medicos', {
   actions: {
     // Normalizar datos del médico
     normalizeMedico(medico) {
-      // Obtener imagen destacada si existe en _embedded (igual que en services.js)
+      // Obtener imagen destacada si existe en _embedded
       const featuredMedia = medico._embedded?.['wp:featuredmedia']?.[0]
       let imagenUrl = '/placeholder.svg'
       
       if (featuredMedia) {
-        // Priorizar imagen en tamaño original o el más grande disponible
         imagenUrl = featuredMedia.media_details?.sizes?.full?.source_url || 
                    featuredMedia.media_details?.sizes?.large?.source_url ||
                    featuredMedia.media_details?.sizes?.medium_large?.source_url ||
@@ -53,10 +52,14 @@ export const useMedicosStore = defineStore('medicos', {
                    '/placeholder.svg'
       }
 
-      // Extraer datos de ACF según la estructura real de la API
+      // Extraer datos de ACF
       const detalles = medico.acf?.informacion_general?.detalles?.[0] || {}
       
-      // Limpiar HTML de la descripción si existe
+      // Obtener especialidad de la taxonomía
+      const especialidadTaxonomy = medico._embedded?.['wp:term']?.[0]?.[0]
+      const especialidadNombre = especialidadTaxonomy?.name || detalles.especilidad || 'Especialidad no especificada'
+      
+      // Limpiar HTML de la descripción
       const descripcionHTML = detalles.Descripcion || ''
       const descripcionLimpia = descripcionHTML.replace(/<[^>]*>/g, '').trim()
 
@@ -65,10 +68,9 @@ export const useMedicosStore = defineStore('medicos', {
         nombre: medico.title?.rendered || 'Sin nombre',
         slug: medico.slug,
         link: medico.link,
-        // Nota: la API usa "especilidad" (con una sola 'a') en lugar de "especialidad"
-        especialidad: detalles.especilidad || 'Especialidad no especificada',
+        especialidad: especialidadNombre,
         descripcion: descripcionLimpia || '',
-        descripcionBreve: '', // No existe en la estructura actual
+        descripcionBreve: '',
         cargo: detalles.cargo || '',
         imagen: imagenUrl,
         telefono: detalles.telefono || '',
@@ -77,12 +79,14 @@ export const useMedicosStore = defineStore('medicos', {
         experiencia: detalles.experiencia || '',
         certificaciones: detalles.certificaciones || [],
         horarios: detalles.horarios || '',
-        //datos nuevos
         celular: detalles.celular || '',
         direccion: detalles.direccion || '',
         servicios: detalles.servicios || '',
-        // Datos originales por si se necesitan
-        acf: medico.acf || {}
+        // Datos originales completos con _embedded
+        acf: {
+          ...medico.acf,
+          _embedded: medico._embedded
+        }
       }
     },
 
