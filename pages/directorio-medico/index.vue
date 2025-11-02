@@ -121,8 +121,8 @@
     <UModal v-model:open="isModalOpen"
         :title="selectedMedico ? selectedMedico.nombre : 'Perfil Médico'"
         :description="selectedMedico ? getEspecialidadName(selectedMedico) : ''" :ui="{
-            content: 'w-[calc(100vw-1rem)] sm:w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100vh-1rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
-            body: 'max-h-[calc(100vh-8rem)] sm:max-h-[calc(100dvh-16rem)] overflow-y-auto modal-body-scroll'
+            content: 'w-[calc(100vw-1rem)] sm:w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100svh-1rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
+            body: 'max-h-[calc(100svh-10rem)] sm:max-h-[calc(100dvh-16rem)] overflow-y-auto modal-body-scroll'
         }">
         <template #body="{ close }">
             <div v-if="selectedMedico" class="space-y-6 pr-2">
@@ -412,3 +412,30 @@ useHead({
     ]
 })
 </script>
+
+<style>
+/* Optimizaciones específicas para iOS */
+@supports (-webkit-touch-callout: none) {
+    /* Detección de iOS/Safari */
+    .modal-body-scroll {
+        /* Mejora el scroll en iOS */
+        -webkit-overflow-scrolling: touch;
+        /* Altura más conservadora para iOS */
+        max-height: calc(100svh - 12rem) !important;
+    }
+    
+    /* Ajuste del modal en iOS cuando aparece el teclado */
+    @media screen and (max-height: 500px) {
+        .modal-body-scroll {
+            max-height: calc(100vh - 6rem) !important;
+        }
+    }
+}
+
+/* Fallback para navegadores que no soportan svh */
+@supports not (height: 100svh) {
+    .modal-body-scroll {
+        max-height: calc(100vh - 10rem);
+    }
+}
+</style>
