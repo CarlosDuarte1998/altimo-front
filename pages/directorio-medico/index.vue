@@ -20,9 +20,11 @@
                     <input
                         v-model="searchTerm"
                         @input="handleSearch"
+                        @focus="onInputFocus"
+                        @blur="onInputBlur"
                         type="text"
                         placeholder="Buscar por nombre o especialidad..."
-                        class="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base"
+                        class="w-full px-4 py-3 pl-12 pr-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm md:text-base search-input"
                     >
                     <UIcon 
                         name="i-heroicons-magnifying-glass" 
@@ -275,6 +277,7 @@ const searchTerm = ref('')
 const searchTimeout = ref<NodeJS.Timeout | null>(null)
 const isModalOpen = ref(false)
 const selectedMedico = ref<Medico | null>(null)
+const isKeyboardVisible = ref(false)
 
 // Función para normalizar texto (remover acentos y convertir a minúsculas)
 const normalizeText = (text: string): string => {
@@ -326,6 +329,23 @@ const handleSearch = () => {
 // Limpiar búsqueda
 const clearSearch = () => {
     searchTerm.value = ''
+}
+
+// Funciones para manejar el teclado en iOS
+const onInputFocus = () => {
+    isKeyboardVisible.value = true
+    // Añadir clase CSS para iOS cuando el teclado está activo
+    if (process.client) {
+        document.body.classList.add('keyboard-visible')
+    }
+}
+
+const onInputBlur = () => {
+    isKeyboardVisible.value = false
+    // Remover clase CSS cuando el teclado se oculta
+    if (process.client) {
+        document.body.classList.remove('keyboard-visible')
+    }
 }
 
 // Cargar médicos al montar el componente
@@ -430,12 +450,60 @@ useHead({
             max-height: calc(100vh - 6rem) !important;
         }
     }
+
+    /* Optimizaciones para el campo de búsqueda en iOS */
+    .search-input {
+        /* Evitar zoom en iOS */
+        font-size: 16px !important;
+        /* Mejorar comportamiento del teclado */
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Ajustes cuando el teclado está visible en iOS */
+    .keyboard-visible {
+        /* Ajustar el viewport para el teclado */
+        height: 100svh !important;
+        overflow: hidden;
+    }
+    
+    /* Reducir espaciado cuando el teclado está activo */
+    .keyboard-visible .py-16 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* Media query para detectar teclado activo por altura reducida */
+    @media screen and (max-height: 500px) {
+        body {
+            /* Reducir padding general */
+            .py-16 {
+                padding-top: 1rem !important;
+                padding-bottom: 1rem !important;
+            }
+            
+            /* Reducir margen del hero */
+            .bg-\[#213364\] {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+        }
+    }
 }
 
 /* Fallback para navegadores que no soportan svh */
 @supports not (height: 100svh) {
     .modal-body-scroll {
         max-height: calc(100vh - 10rem);
+    }
+}
+
+/* Prevenir zoom en inputs en todos los dispositivos iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .search-input {
+        font-size: 16px !important;
+        transform: scale(1);
+        -webkit-text-size-adjust: 100%;
     }
 }
 </style>
