@@ -50,12 +50,12 @@
             </div>
 
             <!-- Estado de Carga -->
-            <div v-if="medicosStore.isLoading" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div v-if="medicosStore.isLoading" class="grid gap-4 grid-cols-2 sm:gap-8 lg:grid-cols-4">
                 <div v-for="i in 4" :key="i" class="text-center">
-                    <USkeleton class="mx-auto mb-4 h-40 w-40 rounded-full" />
-                    <USkeleton class="h-6 w-32 mx-auto mb-2" />
-                    <USkeleton class="h-4 w-24 mx-auto mb-2" />
-                    <USkeleton class="h-16 w-full" />
+                    <USkeleton class="mx-auto mb-2 h-24 w-24 sm:h-32 sm:w-32 lg:h-40 lg:w-40 rounded-full" />
+                    <USkeleton class="h-4 sm:h-5 lg:h-6 w-20 sm:w-28 lg:w-32 mx-auto mb-1 sm:mb-2" />
+                    <USkeleton class="h-3 sm:h-4 w-16 sm:w-20 lg:w-24 mx-auto mb-2" />
+                    <USkeleton class="h-5 sm:h-8 lg:h-10 w-14 sm:w-20 lg:w-24 mx-auto" />
                 </div>
             </div>
 
@@ -87,28 +87,29 @@
             </div>
 
             <!-- Grid de Médicos -->
-            <div v-else-if="filteredMedicos.length > 0" class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div v-else-if="filteredMedicos.length > 0" class="grid gap-4 grid-cols-2 sm:gap-8 lg:grid-cols-4">
                 <div v-for="medico in filteredMedicos" :key="medico.id"
                     class="text-center group cursor-pointer transition-transform duration-300 hover:scale-105">
                     <!-- Imagen del Médico -->
                     <div
-                        class="mx-auto mb-4 h-40 w-40 overflow-hidden rounded-full ring-4 ring-gray-100 group-hover:ring-blue-200 transition-all duration-300">
+                        class="mx-auto mb-2 h-24 w-24 sm:h-32 sm:w-32 lg:h-40 lg:w-40 overflow-hidden rounded-full ring-2 sm:ring-4 ring-gray-100 group-hover:ring-blue-200 transition-all duration-300">
                         <img :alt="medico.nombre" loading="lazy" width="160" height="160"
                             class="h-full w-full object-cover" :src="medico.imagen" @error="handleImageError">
                     </div>
 
                     <!-- Información del Médico -->
-                    <h3 class="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 class="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight">
                         {{ medico.nombre }}
                     </h3>
 
-                    <p class="text-sm font-medium text-blue-600 mt-1">
+                    <p class="text-xs sm:text-sm font-medium text-blue-600 mt-1 leading-tight">
                         {{ getEspecialidadName(medico) }}
                     </p>
 
                     <!-- Botón Ver Perfil -->
                     <UButton @click="openMedicoModal(medico)"
-                        class="mt-4 bg-blue-600 hover:bg-blue-700 text-white border-0" size="sm">
+                        class="mt-2 sm:mt-3 lg:mt-4 bg-blue-600 hover:bg-blue-700 text-white border-0 px-2 py-1 text-xs sm:px-4 sm:py-2 sm:text-sm" 
+                        :ui="{ base: 'min-h-0 h-auto' }">
                         Ver Perfil
                     </UButton>
                 </div>
@@ -120,8 +121,8 @@
     <UModal v-model:open="isModalOpen"
         :title="selectedMedico ? selectedMedico.nombre : 'Perfil Médico'"
         :description="selectedMedico ? getEspecialidadName(selectedMedico) : ''" :ui="{
-            content: 'w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100dvh-2rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
-            body: 'max-h-[calc(100dvh-16rem)] overflow-y-auto modal-body-scroll'
+            content: 'w-[calc(100vw-1rem)] sm:w-[calc(100vw-2rem)] max-w-4xl max-h-[calc(100vh-1rem)] sm:max-h-[calc(100dvh-4rem)] overflow-hidden',
+            body: 'max-h-[calc(100vh-8rem)] sm:max-h-[calc(100dvh-16rem)] overflow-y-auto modal-body-scroll'
         }">
         <template #body="{ close }">
             <div v-if="selectedMedico" class="space-y-6 pr-2">
