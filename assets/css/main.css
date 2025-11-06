@@ -123,3 +123,29 @@ textarea:focus-visible {
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
 }
+
+
+.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden{
+  overflow: visible !important;
+}
+
+/* Forzar overflow visible en swiper de instalaciones */
+.instalaciones-swiper,
+.instalaciones-swiper swiper-container,
+.instalaciones-swiper .swiper,
+.instalaciones-swiper .swiper-wrapper {
+  overflow: visible !important;
+}
+
+/* Para penetrar el shadow DOM */
+swiper-container.instalaciones-swiper {
+  overflow: visible !important;
+}
+
+swiper-container.instalaciones-swiper::part(container) {
+  overflow: visible !important;
+}
+
+swiper-container.instalaciones-swiper::part(wrapper) {
+  overflow: visible !important;
+} 

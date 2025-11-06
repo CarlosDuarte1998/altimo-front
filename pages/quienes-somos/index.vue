@@ -185,69 +185,130 @@
                 <p class="mt-4 text-gray-600">Cargando instalaciones...</p>
             </div>
 
-            <div v-else class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <NuxtLink v-for="instalacion in instalaciones" :key="instalacion.id"
-                    :to="`/instalaciones/${instalacion.slug}`"
-                    class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="relative h-[280px] overflow-hidden">
-                        <img :alt="instalacion.title" loading="lazy" width="400" height="280" decoding="async"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                            :src="instalacion.imagen || '/placeholder.svg'">
+            <div v-else class="relative" style="overflow: visible !important;">
+                <swiper-container 
+                    ref="instalacionesSwiper"
+                    :slides-per-view="1"
+                    :space-between="24"
+                    :autoplay="{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    }"
+                    :pagination="{
+                        clickable: true,
+                        dynamicBullets: true,
+                    }"
+                    :navigation="{
+                        nextEl: '.instalaciones-button-next',
+                        prevEl: '.instalaciones-button-prev',
+                    }"
+                    :breakpoints="{
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 24,
+                        },
+                    }"
+                    class="instalaciones-swiper !pb-12"
+                    style="
+                        --swiper-pagination-color: #213364;
+                        --swiper-navigation-color: #213364;
+                        overflow: visible !important;
+                    "
+                >
+                    <swiper-slide v-for="instalacion in instalaciones" :key="instalacion.id">
+                        <NuxtLink 
+                            :to="`/instalaciones/${instalacion.slug}`"
+                            class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 block h-full">
+                            <div class="relative h-[280px] overflow-hidden">
+                                <img :alt="instalacion.title" loading="lazy" width="400" height="280" decoding="async"
+                                    class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                                    :src="instalacion.imagen || '/placeholder.svg'">
 
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
-                        </div>
-
-                        <div
-                            class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="flex items-center justify-between mb-2">
-                                <span
-                                    class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
-                                    Ver detalles
-                                </span>
                                 <div
-                                    class="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                                    <svg class="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                                    class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300">
+                                </div>
+
+                                <div
+                                    class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <span
+                                            class="inline-block px-3 py-1 bg-blue-600 text-white text-xs font-semibold rounded-full">
+                                            Ver detalles
+                                        </span>
+                                        <div
+                                            class="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                                            <svg class="w-4 h-4 text-white transform group-hover:translate-x-1 transition-transform duration-300"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 5l7 7-7 7"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <h3
+                                        class="text-xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors duration-300">
+                                        {{ instalacion.title }}
+                                    </h3>
+                                </div>
+                            </div>
+
+                            <div class="p-5">
+                                <p class="text-gray-600 text-sm line-clamp-2 leading-relaxed">
+                                    {{ instalacion.descripcion }}
+                                </p>
+
+                                <div
+                                    class="mt-4 flex items-center text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors">
+                                    <span>Explorar instalación</span>
+                                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
                                         fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M9 5l7 7-7 7"></path>
+                                            d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                                     </svg>
                                 </div>
                             </div>
-                            <h3
-                                class="text-xl font-bold text-white mb-1 group-hover:text-blue-300 transition-colors duration-300">
-                                {{ instalacion.title }}
-                            </h3>
-                        </div>
-                    </div>
 
-                    <div class="p-5">
-                        <p class="text-gray-600 text-sm line-clamp-2 leading-relaxed">
-                            {{ instalacion.descripcion }}
-                        </p>
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100">
+                                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </NuxtLink>
+                    </swiper-slide>
+                </swiper-container>
 
-                        <div
-                            class="mt-4 flex items-center text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors">
-                            <span>Explorar instalación</span>
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform duration-300"
-                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                            </svg>
-                        </div>
-                    </div>
+                <!-- Debug: mostrar instalaciones como grid si el swiper falla -->
+                <div v-if="instalaciones.length === 0" class="text-center py-8">
+                    <p class="text-gray-600">No hay instalaciones disponibles</p>
+                </div>
 
-                    <div
-                        class="absolute top-4 right-4 w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-0 group-hover:scale-100">
-                        <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
-                            </path>
-                        </svg>
+                <!-- Fallback grid para debug -->
+                <!-- <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-8" v-if="instalaciones.length > 0">
+                    <div v-for="instalacion in instalaciones" :key="`debug-${instalacion.id}`" class="bg-white p-4 rounded-lg shadow">
+                        <h3 class="font-semibold">{{ instalacion.title }}</h3>
+                        <p class="text-sm text-gray-600">{{ instalacion.descripcion }}</p>
                     </div>
-                </NuxtLink>
+                </div> -->
+
+                <!-- Navigation buttons -->
+                <div class="instalaciones-button-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-[#213364] hover:bg-[#213364] hover:text-white transition-colors duration-300 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </div>
+                <div class="instalaciones-button-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center text-[#213364] hover:bg-[#213364] hover:text-white transition-colors duration-300 cursor-pointer">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -374,10 +435,30 @@ const { fetchInstalaciones, processInstalacion } = useInstalaciones();
 const showModal = ref(false)
 const pdfUrl = ref('')
 
+// Swiper configuration
+const instalacionesSwiper = ref<any>(null);
 
 // Estado para instalaciones
 const instalaciones = ref<any[]>([]);
 const loadingInstalaciones = ref(true);
+
+// Configurar breakpoints después de montar
+const setupSwiperBreakpoints = async () => {
+  await nextTick();
+  if (instalacionesSwiper.value) {
+    // Configurar breakpoints manualmente
+    instalacionesSwiper.value.breakpoints = {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 24,
+      },
+    };
+  }
+};
 
 // Cargar instalaciones
 onMounted(async () => {
@@ -390,9 +471,15 @@ onMounted(async () => {
         );
 
         instalaciones.value = processed;
+        console.log('Instalaciones cargadas:', processed.length, processed);
 
         // Guardar en estado global para uso en páginas de detalle
         useState('allInstalaciones', () => processed);
+        
+        // Configurar breakpoints después de cargar los datos
+        if (processed.length > 0) {
+            await setupSwiperBreakpoints();
+        }
     } catch (error) {
         console.error('Error loading instalaciones:', error);
     } finally {
@@ -452,3 +539,46 @@ function closePdf() {
 
 
 </script>
+
+<style scoped>
+/* Estilos personalizados para el carrusel de instalaciones */
+.instalaciones-swiper :deep(.swiper-pagination) {
+    bottom: 0 !important;
+}
+.instalaciones-swiper :deep(.swiper) {
+    overflow: visible !important;
+}
+
+.instalaciones-swiper :deep(.swiper-pagination-bullet) {
+    width: 12px;
+    height: 12px;
+    background: #cbd5e1;
+    opacity: 1;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+}
+
+.instalaciones-swiper :deep(.swiper-pagination-bullet-active) {
+    background: #213364;
+    transform: scale(1.2);
+}
+
+.instalaciones-swiper :deep(.swiper-pagination-bullet-active-main) {
+    background: #213364;
+}
+
+/* Responsivo para los botones de navegación */
+@media (max-width: 768px) {
+    .instalaciones-button-prev,
+    .instalaciones-button-next {
+        display: none;
+    }
+}
+
+/* Hover effects para navigation buttons */
+.instalaciones-button-prev:hover,
+.instalaciones-button-next:hover {
+    box-shadow: 0 10px 25px rgba(33, 51, 100, 0.2);
+    transform: translateY(-2px);
+}
+</style>
