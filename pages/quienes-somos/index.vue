@@ -212,11 +212,13 @@
                             spaceBetween: 24,
                         },
                     }"
-                    class="instalaciones-swiper !pb-12"
+                    class="instalaciones-swiper"
                     style="
                         --swiper-pagination-color: #213364;
                         --swiper-navigation-color: #213364;
+                        --swiper-pagination-bottom: 10px;
                         overflow: visible !important;
+                        padding-bottom: 50px !important;
                     "
                 >
                     <swiper-slide v-for="instalacion in instalaciones" :key="instalacion.id">
@@ -542,9 +544,14 @@ function closePdf() {
 
 <style scoped>
 /* Estilos personalizados para el carrusel de instalaciones */
-.instalaciones-swiper :deep(.swiper-pagination) {
-    bottom: 0 !important;
+.instalaciones-swiper {
+    --swiper-pagination-bottom: 10px;
 }
+
+.instalaciones-swiper :deep(.swiper-pagination) {
+    bottom: 10px !important;
+}
+
 .instalaciones-swiper :deep(.swiper) {
     overflow: visible !important;
 }
