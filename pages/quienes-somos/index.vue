@@ -3,26 +3,17 @@
         <div class="container px-4 md:px-6">
             <div class="mx-auto max-w-3xl text-center">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Quiénes Somos</h1>
-                <p class="mt-4 text-blue-100 md:text-xl">Conoce más sobre <b>ÁLTIMO</b>, nuestro compromiso con la
-                    excelencia y la atención especial.</p>
+                <p class="mt-4 text-blue-100 md:text-xl">{{ qs.descripcion }}</p>
             </div>
         </div>
     </section>
-
     <section class="py-16">
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="grid gap-12 md:grid-cols-2">
                 <div>
                     <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-4xl">Nuestra Historia</h2>
                     <div class="space-y-4 text-gray-600 text-lg">
-                        <p>Áltimo Medical Center nació hace tres años con el propósito de revolucionar la atención
-                            médica en el occidente del país. Desde sus inicios, este espacio fue creado para unir
-                            innovación, excelencia y una atención especial, reflejando en cada detalle un compromiso
-                            genuino con el bienestar y la tranquilidad de cada paciente.
-                            .<br><br> Nuestro mayor diferenciador es el equipo de médicos y especialistas comprometidos
-                            que combinan tecnología avanzada con atención cálida y personalizada. Áltimo es más que un
-                            centro de salud; es un lugar donde la confianza, la compañía y la esperanza se unen para
-                            cuidar de cada historia.</p>
+                        <div v-html="qs.getHistoriaHTML"></div>
                     </div>
                 </div>
                 <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
@@ -38,132 +29,75 @@
             <div class="grid gap-8 md:grid-cols-3 text-lg">
                 <div class="rounded-lg bg-white p-6 shadow-sm">
                     <h3 class="mb-4 text-xl font-bold text-[#213364]">Misión</h3>
-                    <p class="text-gray-600">Generamos experiencias que mejoran la salud y la calidad de vida.</p>
+                    <p class="text-gray-600">{{qs.mision}} </p>
                 </div>
                 <div class="rounded-lg bg-white p-6 shadow-sm">
                     <h3 class="mb-4 text-xl font-bold text-[#213364]">Visión</h3>
-                    <p class="text-gray-600">Ser la primera opción en servicios de calidad que aporten valor a la salud.
-                    </p>
+                    <p class="text-gray-600">{{qs.vision}} </p>
                 </div>
                 <div class="rounded-lg bg-white p-6 shadow-sm">
                     <h3 class="mb-4 text-xl font-bold text-[#213364]">Valores</h3>
                     <ul class="space-y-2 text-gray-600">
-                        <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
+                        <li v-for="(NombreValor, valor) in qs.valores" :key="valor" class="flex items-start gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
                                 class="lucide lucide-circle-check-big mt-0.5 h-5 w-5 shrink-0 text-blue-600">
                                 <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                                 <path d="m9 11 3 3L22 4"></path>
-                            </svg><span>Confianza</span></li>
-                        <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-circle-check-big mt-0.5 h-5 w-5 shrink-0 text-blue-600">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                <path d="m9 11 3 3L22 4"></path>
-                            </svg><span>Profesionalismo</span></li>
-                        <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-circle-check-big mt-0.5 h-5 w-5 shrink-0 text-blue-600">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                <path d="m9 11 3 3L22 4"></path>
-                            </svg><span>Atención humanizada</span></li>
-                        <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-circle-check-big mt-0.5 h-5 w-5 shrink-0 text-blue-600">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                <path d="m9 11 3 3L22 4"></path>
-                            </svg><span>Confidencialidad</span></li>
-                        <li class="flex items-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"
-                                class="lucide lucide-circle-check-big mt-0.5 h-5 w-5 shrink-0 text-blue-600">
-                                <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
-                                <path d="m9 11 3 3L22 4"></path>
-                            </svg><span>Calidad</span></li>
+                            </svg>
+                            <span>{{ NombreValor }}</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
-
     <!--CUADRADAS 80-->
     <section class="py-16">
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="mb-12 text-center">
                 <h2 class="text-3xl font-bold tracking-tight text-[#213364] sm:text-4xl">Nuestro Equipo</h2>
                 <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
-                    Contamos con un equipo de profesionales altamente calificados y comprometidos con su salud.
+                    {{qs.descripcionequipo}}
                 </p>
             </div>
 
             <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
                 <!-- Miembro 1 -->
-                <div class="text-center bg-white rounded-2xl shadow-md p-4">
+
+                <!-- <div class="text-center bg-white rounded-2xl shadow-md p-4" v-if="qs.equipo.nombre">
                     <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-                        <img alt="Dr. Salvador Rodríguez" loading="lazy" decoding="async"
-                            class="w-full h-90 object-cover"
-                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Rodriguez-scaled-e1760502729464.jpeg"
-                            style="color: transparent;" />
+                        <img
+                        :alt="qs.equipo.nombre"
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-90 object-cover"
+                        :src="qs.equipo.perfil"
+                        style="color: transparent;"
+                        />
                     </div>
-                    <h3 class="text-lg font-medium">Dr. Salvador Rodríguez</h3>
-                    <p class="text-sm text-gray-500">Presidente</p>
+                    <h3 class="text-lg font-medium">{{ qs.equipo.nombre }}</h3>
+                    <p class="text-sm text-gray-500">{{ qs.equipo.puesto }}</p>
                     <p class="mt-2 text-sm text-gray-600 text-justify">
-                        Doctor en Cirugía Dental y Empresario con amplia trayectoria en el sector salud. Fundador del
-                        Centro de Especialidades Dentales CLIDESA, del Centro de Imágenes Médicas CIMRO y del Áltimo
-                        Medical Center.
+                        {{ qs.equipo.descripcion }}
                     </p>
+                    </div> -->
+
+                <div v-for="(persona, index) in qs.equipo" :key="index"
+                    class="text-center bg-white rounded-2xl shadow-md p-4">
+                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
+                        <img :alt="persona.nombre" :src="persona.perfil" loading="lazy" decoding="async"
+                            class="w-full h-90 object-cover" style="color: transparent;" />
+                    </div>
+
+                    <h3 class="text-lg font-medium">{{ persona.nombre }}</h3>
+                    <p class="text-sm text-gray-500">{{ persona.puesto }}</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">{{ persona.descripcion }}</p>
                 </div>
 
-                <!-- Miembro 2 -->
-                <div class="text-center bg-white rounded-2xl shadow-md p-4">
-                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-                        <img alt="Dr. Christian Hernández" loading="lazy" decoding="async"
-                            class="w-full h-90 object-cover"
-                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dr.-Christian-Hernandez-e1760674490972.jpeg"
-                            style="color: transparent;" />
-                    </div>
-                    <h3 class="text-lg font-medium">Dr. Christian Hernández</h3>
-                    <p class="text-sm text-gray-500">Director Médico</p>
-                    <p class="mt-2 text-sm text-gray-600 text-justify">
-                        Especialista en Cirugía General, Endoscópica, Bariátrica y Metabólica, con 23 años de
-                        experiencia. Cuenta con diversidad de cursos y diplomados que respaldan su formación y
-                        trayectoria en el área quirúrgica.
-                    </p>
-                </div>
 
-                <!-- Miembro 3 -->
-                <div class="text-center bg-white rounded-2xl shadow-md p-4">
-                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-                        <img alt="Dra. Alma Flores" loading="lazy" decoding="async" class="w-full h-90 object-cover"
-                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Alma-Flores-scaled-e1760674198612.jpg"
-                            style="color: transparent;" />
-                    </div>
-                    <h3 class="text-lg font-medium">Dra. Alma Flores</h3>
-                    <p class="text-sm text-gray-500">Regente Médico</p>
-                    <p class="mt-2 text-sm text-gray-600 text-justify">
-                        Especialista en Medicina Interna, con 15 años de experiencia y estudios de posgrado que
-                        respaldan su formación profesional.
-                    </p>
-                </div>
 
-                <!-- Miembro 4 -->
-                <div class="text-center bg-white rounded-2xl shadow-md p-4">
-                    <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-                        <img alt="Dra. Ana Sevillano" loading="lazy" decoding="async" class="w-full h-90 object-cover"
-                            src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Dra.-Ana-Sevillano-scaled-e1760673990841.jpg"
-                            style="color: transparent;" />
-                    </div>
-                    <h3 class="text-lg font-medium">Dra. Ana Sevillano</h3>
-                    <p class="text-sm text-gray-500">Regente Médico</p>
-                    <p class="mt-2 text-sm text-gray-600 text-justify">
-                        Especialista en Medicina Interna, con 25 años de experiencia, con participación en diversidad de
-                        congresos que fortalecen su formación y actualización en la práctica médica.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -187,25 +121,15 @@
 
             <!-- Grid de instalaciones sin carrusel de cards -->
             <div v-else class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <NuxtLink 
-                    v-for="(instalacion, index) in instalaciones" 
-                    :key="instalacion.id"
+                <NuxtLink v-for="(instalacion, index) in instalaciones" :key="instalacion.id"
                     :to="`/instalaciones/${instalacion.slug}`"
-                    class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col cursor-pointer"
-                >
+                    class="group relative bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col cursor-pointer">
                     <!-- Carrusel de imágenes (automático con velocidades diferentes - efecto dominó) -->
                     <div class="relative h-[280px] overflow-hidden">
-                        <swiper-container
-                            :slides-per-view="1"
-                            :space-between="0"
-                            :autoplay="{
+                        <swiper-container :slides-per-view="1" :space-between="0" :autoplay="{
                                 delay: getAutoplayDelay(index),
                                 disableOnInteraction: false,
-                            }"
-                            :loop="true"
-                            :allow-touch-move="false"
-                            class="instalacion-images-swiper h-full"
-                        >
+                            }" :loop="true" :allow-touch-move="false" class="instalacion-images-swiper h-full">
                             <!-- Imagen principal -->
                             <swiper-slide>
                                 <img :alt="instalacion.title" loading="lazy" width="400" height="280" decoding="async"
@@ -214,8 +138,8 @@
                             </swiper-slide>
                             <!-- Imágenes de los niveles -->
                             <swiper-slide v-for="(nivel, idx) in instalacion.niveles" :key="`nivel-${idx}`">
-                                <img :alt="`${instalacion.title} - ${nivel.titulo}`" loading="lazy" width="400" height="280" decoding="async"
-                                    class="w-full h-[280px] object-cover"
+                                <img :alt="`${instalacion.title} - ${nivel.titulo}`" loading="lazy" width="400"
+                                    height="280" decoding="async" class="w-full h-[280px] object-cover"
                                     :src="nivel.imagen_url || '/placeholder.svg'">
                             </swiper-slide>
                         </swiper-container>
@@ -287,7 +211,7 @@
 
 
     <!-- 3333 -->
-    
+
 
 
     <!--CERTIFICACIONES Y APROBACIONES-->
@@ -336,15 +260,16 @@
                     Permisos y Certificaciones
                 </h2>
                 <p class="mx-auto mt-4 max-w-[700px] text-gray-500">
-                    Contamos con certificaciones y permisos vigentes que respaldan la calidad y seguridad de nuestros
-                    servicios.
+                    <!-- Contamos con certificaciones y permisos vigentes que respaldan la calidad y seguridad de nuestros
+                    servicios. -->
+                    {{ qs.descripcion_certificaciones }}
                 </p>
             </div>
-
+            
             <!-- Grid de Cards -->
             <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
                 <!-- CARD -->
-                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
+                <!-- <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
                     @click="openPdf('https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-DE-CENTRO-MEDICO-ESPECIALIZADO-.pdf')">
                     <img src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-DE-CENTRO-MEDICO-ESPECIALIZADO-e1760764199531.png"
                         alt="Centro médico especializado"
@@ -357,10 +282,10 @@
                             competentes.
                         </p>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- CARD -->
-                <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
+                <!-- <div class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
                     @click="openPdf('https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-LABORATORIO-CLINICO.pdf')">
                     <img src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/LICENCIA-DE-FUNCIONAMIENTO-LABORATORIO-CLINICO-e1760764229814.png"
                         alt="Laboratorio clínico" class="h-56 w-full object-cover transition group-hover:scale-105" />
@@ -370,7 +295,24 @@
                             Licencia oficial que autoriza la operación de un laboratorio clínico.
                         </p>
                     </div>
+                </div> -->
+                <div v-for="(item, index) in qs.detalles_certificacion" :key="index"
+                    class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
+                    @click="openPdf(item.pdf_certificacion)">
+                    <img :src="item.imagen_certificacion" :alt="item.titulo_certificacion"
+                        class="h-56 w-full object-cover transition group-hover:scale-105" />
+
+                    <div class="p-5">
+                        <h3 class="mb-2 text-lg font-semibold text-[#213364]">
+                            {{ item.titulo_certificacion }}
+                        </h3>
+
+                        <p class="text-gray-600 h-40">
+                            {{ item.descripcion_certificacion }}
+                        </p>
+                    </div>
                 </div>
+
             </div>
         </div>
 
@@ -490,6 +432,14 @@ function closePdf() {
     pdfUrl.value = ''
     showModal.value = false
 }
+
+import { useQuienesStore } from '~/stores/quienes';
+
+const qs = useQuienesStore();
+
+onMounted(async () => {
+  await qs.fetchquienesSomos();
+});
 
 
 </script>

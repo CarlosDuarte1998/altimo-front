@@ -300,7 +300,7 @@ const mainCategories = computed(() => {
       <div class="container relative z-10 px-4 md:px-6 m-auto">
          <div class="grid gap-6 md:grid-cols-2 md:gap-12">
             <div class="flex flex-col justify-center space-y-4">
-               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl">LO MEJOR PARA TU SALUD</h2>
+               <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-4xl">En Áltimo trabajamos con excelencia y dedicación para brindarte una atención confiable y centrada en ti.</h2>
                <!-- <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ÁLTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p> -->
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
