@@ -52,9 +52,9 @@ const handleLogoClick = () => {
                 <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/quienes-somos' }"
                     to="/quienes-somos">Quiénes Somos</NuxtLink>
-                    <!-- <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
+                    <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path === '/directorio-medico' }"
-                    to="/directorio-medico">Directorio Médico</NuxtLink> -->
+                    to="/directorio-medico">Directorio Médico</NuxtLink>
  <NuxtLink class="4xl:text-lg text-sm font-bold text-gray-700 transition-colors hover:text-blue-600 pb-1 border-b-2 border-transparent"
                     :class="{ 'border-blue-600 text-blue-600': route.path.startsWith('/servicios') }"
                     to="/servicios">Servicios</NuxtLink>
@@ -104,10 +104,10 @@ const handleLogoClick = () => {
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/quienes-somos' }"
                                 to="/quienes-somos" @click="toggleSlideover">Quiénes Somos
                             </NuxtLink>
-                            <!-- <NuxtLink class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
+                            <NuxtLink class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path === '/directorio-medico' }"
                                 to="/directorio-medico" @click="toggleSlideover">Directorio Médico
-                            </NuxtLink> -->
+                            </NuxtLink>
                             <NuxtLink class="text-gray-700 hover:text-blue-600 py-2 border-l-4 border-transparent pl-2"
                                 :class="{ 'border-blue-600 text-blue-600 bg-blue-50': route.path.startsWith('/servicios') }"
                                 to="/servicios" @click="toggleSlideover">Servicios</NuxtLink>

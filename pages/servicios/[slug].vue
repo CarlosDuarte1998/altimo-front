@@ -223,7 +223,7 @@
             </div>
             <div class="col-span-12">
                 <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
-                    Atención Especializada y continua
+                    Atención Especializada y Continúa
                 </h2>
                 <div class="space-y-2 text-gray-600 text-lg">
                     <p>
