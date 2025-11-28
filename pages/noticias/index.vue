@@ -6,7 +6,7 @@
         <div class="mx-auto max-w-3xl text-center">
           <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Noticias y Novedades</h1>
           <p class="mt-4 text-blue-100 md:text-xl">
-            Mantente informado sobre las últimas novedades, eventos y avances en CIMRO.
+            Mantente informado sobre las últimas novedades, eventos y avances en ÁLTIMO.
           </p>
         </div>
       </div>
@@ -131,8 +131,8 @@ const { formatDate, cleanExcerpt } = usePosts()
 // SEO y meta
 useALTIMOSEO({
   title: 'Noticias y Novedades',
-  description: 'Mantente informado sobre las últimas novedades, eventos y avances en CIMRO. Descubre nuestras noticias más recientes.',
-  keywords: 'CIMRO noticias, novedades, eventos, diagnóstico por imagen, actualidades médicas'
+  description: 'Mantente informado sobre las últimas novedades, eventos y avances en ÁLTIMO. Descubre nuestras noticias más recientes.',
+  keywords: 'ÁLTIMO noticias, novedades, eventos, diagnóstico por imagen, actualidades médicas'
 })
 
 // Stores

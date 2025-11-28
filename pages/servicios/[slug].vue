@@ -25,10 +25,12 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Services Content -->
     <section class="py-16">
         <div class="container max-w-[1300px] mx-auto px-4 md:px-6">
+            
+            
             <!-- Tabs para Laboratorio Clínico -->
             <div v-if="isLaboratorioClinico && !categoriesStore.isLoading">
                 <UTabs 
@@ -202,6 +204,137 @@
                     </template>
                 </UTabs>
             </div>
+            
+            <!-- Contenido para Hospitalización -->
+<div v-else-if="isHospitalizacion && !categoriesStore.isLoading">
+  <section class="py-16">
+        <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
+            <div class="grid gap-12 md:grid-cols-2">
+                <div>
+                    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">Hospitalización Áltimo</h2>
+                    <div class="space-y-4 text-gray-600 text-lg">
+                        <p>Hemos creado nuestro servicio de hospitalización, diseñándolo para brindar comodidad, seguridad y atención constante. Cada habitación es un espacio privado, amplio y equipado para asegurar una experiencia de bienestar y confianza a nuestros pacientes y sus acompañantes.</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
+                        width="500" height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover"
+                        src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Edificio2-scaled-e1757734412469.jpg"
+                        style="color: transparent;"></div>
+            </div>
+            <div class="col-span-12">
+                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
+                    Atención Especializada y continua
+                </h2>
+                <div class="space-y-2 text-gray-600 text-lg">
+                    <p>
+                         Nuestros profesionales de la salud están disponibles las 24 horas para brindar acompañamiento cercano, realizar monitoreo constante y responder de manera oportuna ante cualquier cambio en el estado de salud del paciente.
+                         <br></br><br></br>
+                         Cuenta con estaciones de enfermería en el segundo y tercer nivel para apoyar el área de habitaciones y un sistema de comunicación que permite al paciente contacto permanente, garantizando seguridad, control y una atención verdaderamente personalizada.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-span-12 mt-10">
+                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
+                   Excelencia Médica y Tecnología Avanzada
+                </h2>
+                <div class="space-y-2 text-gray-600 text-lg">
+                    <p>
+                         Contamos con médicos especialistas, protocolos clínicos seguros y tecnología de última generación que permiten tratamientos precisos y adecuados para cada patología. Nuestro liderazgo médico y el talento del personal se reflejan en una atención confiable, humana y eficiente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid gap-12 md:grid-cols-2 mt-10">
+                <div class="flex items-center">
+                    <h2 class="mb-6 text-3xl font-bold tracking-tight text-[#213364] sm:text-3xl leading-relaxed">
+                        Nuestros quirófanos han sido certificados por el CSSP cumpliendo con protocolos de cirugía segura.
+                    </h2>
+                </div>
+                <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
+                        width="500" height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover"
+                        src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Quirofanos1.jpg"
+                        style="color: transparent;"></div>
+            </div>
+
+            <div class="col-span-12 mt-10">
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
+      Privacidad, Exclusividad y Confort
+    </h2>
+    <div class="space-y-2 text-gray-600 text-lg">
+        <p>
+             Brindamos un ambiente exclusivo con total privacidad y discreción. Cada habitación está diseñada para asegurar que el paciente pueda vivir su proceso de recuperación en un espacio tranquilo, seguro y sin interrupciones, el ruido de cada habitación ha sido aislado con paredes especiales.
+             <br></br><br></br>
+             Controlamos cuidadosamente el acceso a las áreas de hospitalización y manejamos la información clínica con absoluta confidencialidad, garantizando que cada detalle de la estancia se mantenga en un entorno reservado y respetuoso.
+        </p>
+    </div>
+</div>
+
+<div class="col-span-12 mt-10">
+    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
+        ¿Qué incluye la hospitalización?
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+        <!-- 1. Seguridad y comodidad básica -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">1. Seguridad y comodidad básica</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li>✓ Cama hospitalaria</li>
+                <li>✓ Baño privado con agua caliente y barras de seguridad</li>
+                <li>✓ Sistema de detección de incendios</li>
+            </ul>
+        </div>
+
+        <!-- 2. Atención clínica personalizada -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">2. Atención clínica personalizada</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li>✓ Alimentación personalizada supervisada por nutricionista</li>
+                <li>✓ Limpieza diaria</li>
+                <li>✓ Intercomunicador (comunicación directa con enfermería)</li>
+            </ul>
+        </div>
+
+        <!-- 3. Comodidad para el paciente y acompañante -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">3. Comodidad para el paciente y acompañante</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li>✓ Aire acondicionado</li>
+                <li>✓ Sofá cama para acompañante</li>
+                <li>✓ Clóset privado</li>
+                <li>✓ Refrigeradora</li>
+                <li>✓ Televisión</li>
+                <li>✓ Wifi gratuito</li>
+            </ul>
+        </div>
+
+        <!-- 4. Servicios adicionales y experiencia premium -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">4. Servicios adicionales y experiencia premium</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li>✓ Kit de bienvenida</li>
+                <li>✓ Servicio de lavandería</li>
+                <li>✓ Servicio de cafetería para acompañantes</li>
+            </ul>
+        </div>
+
+        <!-- 5. Organización y convivencia -->
+        <div>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">5. Organización y convivencia</h3>
+            <ul class="space-y-2 text-gray-700">
+                <li>✓ Control de visita según instrucciones del paciente</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+        </div>
+    </section>
+</div>
+
 
             <!-- Contenido normal para otras categorías -->
             <div v-else>
@@ -216,7 +349,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <!-- Error State -->
             <div v-else-if="categoriesStore.error" class="text-center py-12">
                 <div class="text-red-600 mb-4">
@@ -317,6 +450,14 @@ const isLaboratorioClinico = computed(() => {
     currentCategory.value.id === 21 ||
     currentCategory.value.id === '21' ||
     currentCategory.value.slug === 'laboratorio-clinico'
+  )
+})
+
+const isHospitalizacion = computed(() => {
+  return currentCategory.value && (
+    currentCategory.value.id === 22 ||
+    currentCategory.value.id === '22' ||
+    currentCategory.value.slug === 'hospitalizacion'
   )
 })
 
@@ -459,9 +600,9 @@ watch(() => route.params.slug, async (newSlug) => {
 
 // Meta tags dinámicos
 useSeoMeta({
-  title: computed(() => currentCategory.value ? `${currentCategory.value.name} - CIMRO` : 'Categoría no encontrada - CIMRO'),
+  title: computed(() => currentCategory.value ? `${currentCategory.value.name} - ALTIMO` : 'Categoría no encontrada - ALTIMO'),
   description: computed(() => currentCategory.value?.description || 'Servicios de diagnóstico por imagen especializados'),
-  ogTitle: computed(() => currentCategory.value ? `${currentCategory.value.name} - CIMRO` : 'Categoría no encontrada - CIMRO'),
+  ogTitle: computed(() => currentCategory.value ? `${currentCategory.value.name} - ALTIMO` : 'Categoría no encontrada - ALTIMO'),
   ogDescription: computed(() => currentCategory.value?.description || 'Servicios médicos especializados en diagnóstico por imagen'),
   ogImage: computed(() => currentCategory.value?.imagen_url || '/logo-horizontal.png'),
   twitterCard: 'summary_large_image'
