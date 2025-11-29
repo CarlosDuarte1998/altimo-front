@@ -211,7 +211,7 @@
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="grid gap-12 md:grid-cols-2">
                 <div>
-                    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">Hospitalización Áltimo</h2>
+                    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">Hospitalización Áltimo</h2>
                     <div class="space-y-4 text-gray-600 text-lg">
                         <p>Hemos creado nuestro servicio de hospitalización, diseñándolo para brindar comodidad, seguridad y atención constante. Cada habitación es un espacio privado, amplio y equipado para asegurar una experiencia de bienestar y confianza a nuestros pacientes y sus acompañantes.</p>
                     </div>
@@ -221,9 +221,9 @@
                         src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Edificio2-scaled-e1757734412469.jpg"
                         style="color: transparent;"></div>
             </div>
-            <div class="col-span-12">
-                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
-                    Atención Especializada y Continúa
+            <div class="col-span-12 mt-5">
+                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
+                    Atención Especializada y Continua
                 </h2>
                 <div class="space-y-2 text-gray-600 text-lg">
                     <p>
@@ -235,7 +235,7 @@
             </div>
 
             <div class="col-span-12 mt-10">
-                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl">
+                <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
                    Excelencia Médica y Tecnología Avanzada
                 </h2>
                 <div class="space-y-2 text-gray-600 text-lg">
@@ -245,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="grid gap-12 md:grid-cols-2 mt-10">
+            <!-- <div class="grid gap-12 md:grid-cols-2 mt-10">
                 <div class="flex items-center">
                     <h2 class="mb-6 text-3xl font-bold tracking-tight text-[#213364] sm:text-3xl leading-relaxed">
                         Nuestros quirófanos han sido certificados por el CSSP cumpliendo con protocolos de cirugía segura.
@@ -255,7 +255,7 @@
                         width="500" height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover"
                         src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Quirofanos1.jpg"
                         style="color: transparent;"></div>
-            </div>
+            </div> -->
 
             <div class="col-span-12 mt-10">
     <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
@@ -278,7 +278,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
         <!-- 1. Seguridad y comodidad básica -->
         <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">1. Seguridad y comodidad básica</h3>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">Seguridad y comodidad básica</h3>
             <ul class="space-y-2 text-gray-700">
                 <li>✓ Cama hospitalaria</li>
                 <li>✓ Baño privado con agua caliente y barras de seguridad</li>
@@ -288,7 +288,7 @@
 
         <!-- 2. Atención clínica personalizada -->
         <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">2. Atención clínica personalizada</h3>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">Atención clínica personalizada</h3>
             <ul class="space-y-2 text-gray-700">
                 <li>✓ Alimentación personalizada supervisada por nutricionista</li>
                 <li>✓ Limpieza diaria</li>
@@ -298,7 +298,7 @@
 
         <!-- 3. Comodidad para el paciente y acompañante -->
         <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">3. Comodidad para el paciente y acompañante</h3>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">Comodidad para el paciente y acompañante</h3>
             <ul class="space-y-2 text-gray-700">
                 <li>✓ Aire acondicionado</li>
                 <li>✓ Sofá cama para acompañante</li>
@@ -311,7 +311,7 @@
 
         <!-- 4. Servicios adicionales y experiencia premium -->
         <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">4. Servicios adicionales y experiencia premium</h3>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">Servicios adicionales y experiencia premium</h3>
             <ul class="space-y-2 text-gray-700">
                 <li>✓ Kit de bienvenida</li>
                 <li>✓ Servicio de lavandería</li>
@@ -321,7 +321,7 @@
 
         <!-- 5. Organización y convivencia -->
         <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">5. Organización y convivencia</h3>
+            <h3 class="text-xl font-semibold text-[#213364] mb-4">Organización y convivencia</h3>
             <ul class="space-y-2 text-gray-700">
                 <li>✓ Control de visita según instrucciones del paciente</li>
             </ul>
