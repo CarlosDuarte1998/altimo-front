@@ -14,27 +14,21 @@ export const useALTIMOSEO = () => {
   // Palabras clave SEO principales
   const mainKeywords = [
     'ÁLTIMO',
-    'Centro de Imágenes Radiológicas de Occidente',
+    'MEDICAL CENTER',
     'Santa Ana',
-    'tomografía computarizada Santa Ana',
-    'ultrasonidos Santa Ana',
-    'rayos x Santa Ana',
-    'mamografía Santa Ana',
-    'cardiología Santa Ana',
-    'diagnóstico por imágenes El Salvador',
+    'Hospitalización Santa Ana',
+    'Cirugía Santa Ana',
     'radiología occidente El Salvador',
     'centro médico Santa Ana'
   ];
 
   // Servicios médicos
   const services = [
-    'Tomografía Computarizada Multicorte',
+    'Hospitalización',
+    'Cirugía',
+    'Radiología',
     'Cardiología',
-    'Ultrasonidos Convencionales y Especiales',
-    'Ultrasonidos Ginecológicos y Obstétricos',
-    'Rayos X Convencionales y Especiales',
-    'Rayos X Dentales',
-    'Mamografía'
+    'MEDICAL CENTER'
   ];
 
   // Aseguradoras afiliadas
@@ -51,7 +45,7 @@ export const useALTIMOSEO = () => {
 
   // Palabras clave Long Tail para SEO
   const longTailKeywords = [
-    'tomografía computarizada multicorte Santa Ana',
+    'ÁLTIMO - MEDICAL CENTER',
     'ultrasonidos ginecológicos Santa Ana',
     'rayos x dentales Santa Ana El Salvador',
     'mamografía digital Santa Ana',
@@ -60,7 +54,7 @@ export const useALTIMOSEO = () => {
     'diagnóstico por imágenes Santa Ana El Salvador',
     'radiología SISA Santa Ana',
     'tomografía MAPFRE Santa Ana',
-    'ultrasonidos ACSA El Salvador',
+    'ultrasonidos AC  SA El Salvador',
     'diagnóstico Seguros Azul Santa Ana'
   ];
 
@@ -75,7 +69,7 @@ export const useALTIMOSEO = () => {
   };
 
   // Meta descripción base
-  const baseDescription = `${corporateInfo.name} en ${corporateInfo.location}. Servicios de diagnóstico por imágenes con tecnología de vanguardia: ${services.slice(0, 3).join(', ')} y más. Aseguradoras afiliadas.`;
+  const baseDescription = `${corporateInfo.name} en ${corporateInfo.location}. MEDICAL CENTER: ${services.slice(0, 3).join(', ')} y más. Aseguradoras afiliadas.`;
 
   // Generar meta keywords string
   const getKeywordsString = (additionalKeywords: string[] = []) => {

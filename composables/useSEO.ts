@@ -12,9 +12,9 @@ export const useSEO = () => {
     lang?: string
   }) => {
     const {
-      title = 'ALTIMO - Medical Center',
-      description = 'Centro especializado en diagnóstico por imagen con tecnología de vanguardia en El Salvador.',
-      keywords = 'ALTIMO, radiología, diagnóstico por imagen, El Salvador',
+      title = 'ÁLTIMO',
+      description = 'MEDICAL CENTER',
+      keywords = 'ÁLTIMO, HOSPITALIZACIÓN, LABORATORIO, SANTA ANA, El Salvador',
       image = '/logo-horizontal.png',
       url = config.public.SITE_URL as string,
       type = 'website' as const,
