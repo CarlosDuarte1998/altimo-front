@@ -6,15 +6,15 @@ const { corporateInfo, getKeywordsString, generateDescription, getSchemaData } =
 
 // SEO Meta Tags para la página principal
 useSeoMeta({
-  title: `${corporateInfo.name} - Diagnóstico por Imágenes Santa Ana`,
-  description: generateDescription('CIMRO es el centro líder en diagnóstico por imágenes en Santa Ana, El Salvador. Tomografía computarizada multicorte, ultrasonidos, rayos X, mamografía, cardiología. Aseguradoras afiliadas SISA, ACSA, MAPFRE.'),
+  title: `${corporateInfo.name}`,
+  description: generateDescription('ÁLTIMO es el centro líder en diagnóstico en Santa Ana, El Salvador. Aseguradoras afiliadas SISA, ACSA, MAPFRE.'),
   keywords: getKeywordsString(),
   ogTitle: `${corporateInfo.name} Santa Ana El Salvador`,
   ogDescription: generateDescription(),
   ogImage: `${corporateInfo.website}/logo-horizontal.png`,
   ogUrl: corporateInfo.website,
   twitterTitle: `${corporateInfo.name} Santa Ana`,
-  twitterDescription: 'Diagnóstico por imágenes con tecnología de vanguardia en Santa Ana, El Salvador. Agende su cita en CIMRO.',
+  twitterDescription: 'Diagnóstico con tecnología de vanguardia en Santa Ana, El Salvador. Agende su cita en ÁLTIMO.',
   twitterImage: `${corporateInfo.website}/logo-horizontal.png`,
 });
 

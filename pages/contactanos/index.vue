@@ -34,17 +34,17 @@ const hours = computed(() => {
 // SEO Meta Tags para página de contacto
 useSeoMeta({
     title: `Contacto - Agende su Cita | ${corporateInfo.name}`,
-    description: generateDescription(`Contáctenos para agendar su cita de diagnóstico por imágenes en ${corporateInfo.location}. ${businessHours.weekdays}. ${businessHours.saturday}. Atención personalizada y tecnología de vanguardia.`),
+    description: generateDescription(`Visitanos: ${corporateInfo.location}. ${businessHours.weekdays}. ${businessHours.saturday}. Atención personalizada y tecnología de vanguardia.`),
     keywords: getKeywordsString([
         'contacto ALTIMO Santa Ana',
-        'agendar cita radiología Santa Ana',
+        'hospitalización Santa Ana',
         'teléfono ALTIMO',
         'dirección centro imágenes Santa Ana',
         'horarios ALTIMO El Salvador',
         'cita diagnóstico por imágenes'
     ]),
-    ogTitle: `Contacto - ${corporateInfo.shortName} Centro de Imágenes Santa Ana`,
-    ogDescription: `Agende su cita de diagnóstico por imágenes en ${corporateInfo.name}. Contáctenos para más información sobre nuestros servicios especializados.`,
+    ogTitle: `Contacto - ${corporateInfo.shortName} MEDICAL CENTER`,
+    ogDescription: `Agende su cita en ${corporateInfo.name}. Contáctenos para más información sobre nuestros servicios especializados.`,
     ogImage: `${corporateInfo.website}/logo-horizontal.png`,
     ogUrl: `${corporateInfo.website}/contactanos`
 });

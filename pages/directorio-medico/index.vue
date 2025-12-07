@@ -382,23 +382,40 @@ const handleImageError = (event: Event) => {
 }
 
 // SEO optimizado para página "Directorio Médico"
+// useSeoMeta({
+//     title: `Directorio Médico | ${corporateInfo.name}`,
+//     description: generateDescription(`Conoce a nuestro equipo médico especializado en ${corporateInfo.name}. Profesionales comprometidos con la excelencia en diagnóstico por imágenes en Santa Ana, El Salvador.`),
+//     keywords: getKeywordsString([
+//         'médicos especialistas Santa Ana',
+//         'radiólogos El Salvador',
+//         'equipo médico ALTIMO',
+//         'directorio médico Santa Ana',
+//         'especialistas diagnóstico por imágenes',
+//         'cardiólogos Santa Ana',
+//         'médicos certificados El Salvador'
+//     ]),
+//     ogTitle: `Directorio Médico - ${corporateInfo.shortName} Centro de Imágenes Santa Ana`,
+//     ogDescription: `Conoce a nuestro equipo de profesionales médicos especializados en ${corporateInfo.name}, comprometidos con la excelencia médica en Santa Ana, El Salvador.`,
+//     ogImage: `${corporateInfo.website}/logo-horizontal.png`,
+//     ogUrl: `${corporateInfo.website}/directorio-medico`
+// })
+
 useSeoMeta({
-    title: `Directorio Médico | ${corporateInfo.name}`,
-    description: generateDescription(`Conoce a nuestro equipo médico especializado en ${corporateInfo.name}. Profesionales comprometidos con la excelencia en diagnóstico por imágenes en Santa Ana, El Salvador.`),
+    title: `Contacto - Agende su Cita | ${corporateInfo.name}`,
+    description: generateDescription(`Visitanos: ${corporateInfo.location}. Atención personalizada y tecnología de vanguardia.`),
     keywords: getKeywordsString([
-        'médicos especialistas Santa Ana',
-        'radiólogos El Salvador',
-        'equipo médico ALTIMO',
-        'directorio médico Santa Ana',
-        'especialistas diagnóstico por imágenes',
-        'cardiólogos Santa Ana',
-        'médicos certificados El Salvador'
+        'contacto ALTIMO Santa Ana',
+        'hospitalización Santa Ana',
+        'teléfono ALTIMO',
+        'dirección centro imágenes Santa Ana',
+        'horarios ALTIMO El Salvador',
+        'cita diagnóstico por imágenes'
     ]),
-    ogTitle: `Directorio Médico - ${corporateInfo.shortName} Centro de Imágenes Santa Ana`,
-    ogDescription: `Conoce a nuestro equipo de profesionales médicos especializados en ${corporateInfo.name}, comprometidos con la excelencia médica en Santa Ana, El Salvador.`,
+    ogTitle: `Contacto - ${corporateInfo.shortName} MEDICAL CENTER`,
+    ogDescription: `Agende su cita en ${corporateInfo.name}. Contáctenos para más información sobre nuestros servicios especializados.`,
     ogImage: `${corporateInfo.website}/logo-horizontal.png`,
-    ogUrl: `${corporateInfo.website}/directorio-medico`
-})
+    ogUrl: `${corporateInfo.website}/contactanos`
+});
 
 // Schema.org para página de equipo médico
 useHead({

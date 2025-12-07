@@ -305,16 +305,16 @@ const filteredCategories = computed(() => {
 
 // SEO optimizado para página de servicios
 useSeoMeta({
-  title: `Servicios de Diagnóstico por Imágenes | ${corporateInfo.name}`,
-  description: generateDescription(`Servicios especializados de diagnóstico por imágenes en Santa Ana, El Salvador. ${services.join(', ')}. Centro médico con tecnología de vanguardia y aseguradoras afiliadas.`),
+  title: `ÁLTIMO MEDICAL CENTER | ${corporateInfo.name}`,
+  description: generateDescription(`Servicios especializados en Santa Ana, El Salvador. ${services.join(', ')}.`),
   keywords: getKeywordsString([
     'servicios radiológicos Santa Ana',
     'estudios médicos Santa Ana',
-    'centro radiológico El Salvador',
+    'centro médico El Salvador',
     'diagnósticos médicos occidente El Salvador'
   ]),
-  ogTitle: `Servicios de Diagnóstico por Imágenes - ${corporateInfo.shortName} Santa Ana`,
-  ogDescription: `Conoce todos los servicios de diagnóstico por imágenes que ofrece ${corporateInfo.name}. Tecnología de vanguardia y personal especializado.`,
+  ogTitle: `Servicios de Diagnóstico - ${corporateInfo.shortName} Santa Ana`,
+  ogDescription: `Conoce todos los servicios de diagnóstico que ofrece ${corporateInfo.name}. Tecnología de vanguardia y personal especializado.`,
   ogImage: `${corporateInfo.website}/logo-horizontal.png`,
   ogUrl: `${corporateInfo.website}/servicios`
 });
@@ -329,7 +329,7 @@ useHead({
         '@type': 'MedicalOrganization',
         name: corporateInfo.name,
         url: `${corporateInfo.website}/servicios`,
-        description: `Servicios especializados de diagnóstico por imágenes en Santa Ana, El Salvador`,
+        description: `Servicios especializados de diagnóstico en Santa Ana, El Salvador`,
         medicalSpecialty: services,
         address: {
           '@type': 'PostalAddress',

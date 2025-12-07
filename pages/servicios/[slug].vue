@@ -601,9 +601,9 @@ watch(() => route.params.slug, async (newSlug) => {
 // Meta tags dinámicos
 useSeoMeta({
   title: computed(() => currentCategory.value ? `${currentCategory.value.name} - ALTIMO` : 'Categoría no encontrada - ALTIMO'),
-  description: computed(() => currentCategory.value?.description || 'Servicios de diagnóstico por imagen especializados'),
+  description: computed(() => currentCategory.value?.description || 'Servicios de diagnóstico especializados'),
   ogTitle: computed(() => currentCategory.value ? `${currentCategory.value.name} - ALTIMO` : 'Categoría no encontrada - ALTIMO'),
-  ogDescription: computed(() => currentCategory.value?.description || 'Servicios médicos especializados en diagnóstico por imagen'),
+  ogDescription: computed(() => currentCategory.value?.description || 'Servicios médicos especializados en diagnóstico'),
   ogImage: computed(() => currentCategory.value?.imagen_url || '/logo-horizontal.png'),
   twitterCard: 'summary_large_image'
 })
