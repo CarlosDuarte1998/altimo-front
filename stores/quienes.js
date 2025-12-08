@@ -35,7 +35,6 @@ export const useQuienesStore = defineStore("quienes", {
                     const response = await axios.get(
                         `https://admin-altimo.gunssoft.tech/wp-json/acf/v3/quienes-somos`
                     );
-                    console.log(response.data);
                     const data = response.data;
                     this.quienesSomos = data;
                     this.descripcion = data.descripcion || "";
@@ -60,9 +59,6 @@ export const useQuienesStore = defineStore("quienes", {
                     })) || [];
 
                     this.loaded = true;
-                        console.log(this.equipo);
-                        console.log("-------------------");
-                        console.log(this.equipo.detalles_equipo);
 
                 } catch (error) {
                     console.error("Error fetching quienesSomos:", error);

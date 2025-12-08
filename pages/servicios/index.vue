@@ -295,11 +295,9 @@ const filteredCategories = computed(() => {
   const filtered = typedCategoriesStore.categoriesWithServices.filter(
     (category) => {
       // Debug: ver qué categorías tenemos
-      console.log('Categoría:', category.name, 'ID:', category.id, 'Tipo:', typeof category.id)
       return category.id !== 25 && category.id !== '25' && String(category.id) !== '25'
     }
   )
-  console.log('Total categorías después de filtrar:', filtered.length)
   return filtered
 })
 

@@ -84,16 +84,16 @@
                     </p>
                     </div> -->
 
-                <div v-for="(persona, index) in qs.equipo" :key="index"
+                <div v-for="(persona, index) in (qs.equipo as any[])" :key="index"
                     class="text-center bg-white rounded-2xl shadow-md p-4">
                     <div class="mb-4 overflow-hidden rounded-xl shadow-lg">
-                        <img :alt="persona.nombre" :src="persona.perfil" loading="lazy" decoding="async"
+                        <img :alt="(persona as any).nombre" :src="(persona as any).perfil" loading="lazy" decoding="async"
                             class="w-full h-90 object-cover" style="color: transparent;" />
                     </div>
 
-                    <h3 class="text-lg font-medium">{{ persona.nombre }}</h3>
-                    <p class="text-sm text-gray-500">{{ persona.puesto }}</p>
-                    <p class="mt-2 text-sm text-gray-600 text-justify">{{ persona.descripcion }}</p>
+                    <h3 class="text-lg font-medium">{{ (persona as any).nombre }}</h3>
+                    <p class="text-sm text-gray-500">{{ (persona as any).puesto }}</p>
+                    <p class="mt-2 text-sm text-gray-600 text-justify">{{ (persona as any).descripcion }}</p>
                 </div>
 
 
@@ -296,19 +296,19 @@
                         </p>
                     </div>
                 </div> -->
-                <div v-for="(item, index) in qs.detalles_certificacion" :key="index"
+                <div v-for="(item, index) in (qs.detalles_certificacion as any[])" :key="index"
                     class="group relative overflow-hidden rounded-2xl bg-white shadow-md transition hover:shadow-lg cursor-pointer"
-                    @click="openPdf(item.pdf_certificacion)">
-                    <img :src="item.imagen_certificacion" :alt="item.titulo_certificacion"
+                    @click="openPdf((item as any).pdf_certificacion)">
+                    <img :src="(item as any).imagen_certificacion" :alt="(item as any).titulo_certificacion"
                         class="h-56 w-full object-cover transition group-hover:scale-105" />
 
                     <div class="p-5">
                         <h3 class="mb-2 text-lg font-semibold text-[#213364]">
-                            {{ item.titulo_certificacion }}
+                            {{ (item as any).titulo_certificacion }}
                         </h3>
 
                         <p class="text-gray-600 h-40">
-                            {{ item.descripcion_certificacion }}
+                            {{ (item as any).descripcion_certificacion }}
                         </p>
                     </div>
                 </div>
@@ -372,7 +372,6 @@ onMounted(async () => {
         );
 
         instalaciones.value = processed;
-        console.log('Instalaciones cargadas:', processed.length, processed);
 
         // Guardar en estado global para uso en páginas de detalle
         useState('allInstalaciones', () => processed);
