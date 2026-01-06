@@ -7,7 +7,7 @@ export const useALTIMOSEO = () => {
     address: 'Entre, 23 Calle Oriente, Avenida Independencia Sur, Santa Ana CP 2201',
     phone: '+503 2401-2800',
     email: 'info@altimosv.com',
-    whatsapp: '+503 7746-1474',
+    whatsapp: '+503 7066-7121',
     website: 'altimosv.com'
   };
 

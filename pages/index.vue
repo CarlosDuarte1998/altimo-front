@@ -304,7 +304,7 @@ const mainCategories = computed(() => {
                <!-- <p class="max-w-[600px] text-blue-100 md:text-xl">En <b>ÁLTIMO</b> ofrecemos un entorno seguro y profesional, donde tu bienestar es nuestra prioridad.</p> -->
                <div class="flex flex-col gap-3 sm:flex-row">
                   <a class="inline-flex items-center justify-center h-11 rounded-md px-8 bg-white text-blue-900 hover:bg-blue-50 font-medium transition-colors"
-                     href="https://api.whatsapp.com/send/?phone=50377461474&text=Hola%2C+quisiera+informaci%C8%AFn&type=phone_number&app_absent=0" target="_blank">
+                     href="https://api.whatsapp.com/send/?phone=50370667121&text=Hola%2C+quisiera+informaci%C8%AFn&type=phone_number&app_absent=0" target="_blank">
                      <Icon name="i-flowbite-whatsapp-solid" class="mr-2 h-5 w-5" />
                      Agendar Cita
                   

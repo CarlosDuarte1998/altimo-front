@@ -55,16 +55,16 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'robots', content: 'index, follow' },
         { name: 'author', content: 'ALTIMO - Medical Center' },
-        { name: 'description', content: 'ALTIMO - Medical Center en Santa Ana, El Salvador. Tomografía computarizada, ultrasonidos, rayos X, mamografía, cardiología. Diagnóstico por imágenes con tecnología de vanguardia.' },
-        { name: 'keywords', content: 'ALTIMO, Medical Center, Santa Ana, tomografía computarizada Santa Ana, ultrasonidos Santa Ana, rayos x Santa Ana, mamografía Santa Ana, cardiología Santa Ana, diagnóstico por imágenes El Salvador, radiología occidente El Salvador, centro médico Santa Ana, SISA, ACSA, MAPFRE, Seguros Azul' },
+        { name: 'description', content: 'ALTIMO - Medical Center en Santa Ana, El Salvador. Diagnóstico con tecnología de vanguardia.' },
+        { name: 'keywords', content: 'ALTIMO, Medical Center, Santa Ana, centro médico Santa Ana.' },
         { property: 'og:site_name', content: 'ALTIMO - Medical Center' },
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'ALTIMO - Medical Center Santa Ana' },
-        { property: 'og:description', content: 'Centro especializado en diagnóstico por imágenes en Santa Ana, El Salvador. Tomografía, ultrasonidos, rayos X, mamografía y cardiología con aseguradoras afiliadas.' },
+        { property: 'og:description', content: 'ALTIMO - Medical Center en Santa Ana, El Salvador. Diagnóstico con tecnología de vanguardia.' },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@altimo.sv' },
         { name: 'twitter:title', content: 'ALTIMO - Medical Center' },
-        { name: 'twitter:description', content: 'Servicios de diagnóstico por imágenes en Santa Ana, El Salvador. Tecnología de vanguardia y personal especializado.' }
+        { name: 'twitter:description', content: 'Servicios de hospitalización en Santa Ana, El Salvador. Tecnología de vanguardia y personal especializado.' }
       ],
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -144,21 +144,21 @@
                         </p>
 
                         <!-- Información de Contacto -->
-                        <div v-if="selectedMedico.telefono || selectedMedico.email" class="mt-1 space-y-1">
+                        <div class="mt-1 space-y-1">
                             <div v-if="selectedMedico.direccion"
                                 class="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-600">
                                 <UIcon name="heroicons:map-pin" class="text-blue-500" />
-                                <span>{{ selectedMedico.direccion }}</span>
+                                <span>{{ selectedMedico.direccion == null ? '' : selectedMedico.direccion}}</span>
                             </div>
                             <div v-if="selectedMedico.celular"
                                 class="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-600">
                                 <UIcon name="heroicons:device-phone-mobile" class="text-blue-500" />
-                                <span>{{ selectedMedico.celular }}</span>
+                                <span>{{ selectedMedico.celular == null ? '' : selectedMedico.celular }}</span>
                             </div>
                             <div v-if="selectedMedico.telefono"
                                 class="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-600">
                                 <UIcon name="i-heroicons-phone" class="text-blue-500" />
-                                <span>{{ selectedMedico.telefono }}</span>
+                                <span>{{ selectedMedico.telefono == null ? '' : selectedMedico.telefono }}</span>
                             </div>
                             <!-- <div v-if="selectedMedico.email" class="flex items-center justify-center sm:justify-start gap-2 text-sm text-gray-600">
                                 <UIcon name="i-heroicons-envelope" class="text-blue-500" />

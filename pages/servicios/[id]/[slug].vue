@@ -124,7 +124,7 @@ const whatsappMessage = computed(() => {
 });
 
 const whatsappUrl = computed(() => {
-  return `https://wa.me/50377461474?text=${encodeURIComponent(whatsappMessage.value)}`;
+  return `https://wa.me/50370667121?text=${encodeURIComponent(whatsappMessage.value)}`;
 });
 
 // Meta tags dinámicos
