@@ -34,7 +34,8 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/sitemap',
     '@nuxtjs/device',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    'nuxt-gtag'
   ],
 
   // Configuración de robots para baseURL
@@ -92,7 +93,10 @@ export default defineNuxtConfig({
   },
 
   // Configuración de CSS crítico
-  css: ['~/assets/css/main.css']
+  css: ['~/assets/css/main.css'],
+  gtag: {
+    id: 'G-F9DFNN13SP'
+  }
 
 
 
