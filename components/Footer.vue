@@ -2,8 +2,10 @@
 import { useConfigStore } from "#imports";
 
 //store
+//const {configStore, businessHours} = useConfigStore();
 const configStore = useConfigStore();
-const { corporateInfo, businessHours } = useALTIMOSEO();
+const { businessHours } = storeToRefs(configStore);
+const { corporateInfo } = useALTIMOSEO();
 
 // Usar información de contacto de la API o fallback al composable
 const contactInfo = computed(() => {

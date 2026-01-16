@@ -12,6 +12,7 @@ export const useConfigStore = defineStore("config", {
         socialMedia: [],
         contactInfo: {},
         businessHours: {},
+        apiBaseUrl: 'https://admin-altimo.gunssoft.tech/wp-json/acf/v3/opciones',
         isLoading: false,
         loaded: false,
         error: null,
@@ -27,7 +28,7 @@ export const useConfigStore = defineStore("config", {
                 this.error = null;
                 
                 try {
-                    const response = await axios.get(`https://admin-altimo.gunssoft.tech/wp-json/acf/v3/opciones`);
+                    const response = await axios.get(this.apiBaseUrl);
                     this.configuraciones = response.data;
 
                     this.bannerMain = this.configuraciones["configuraciones"].bannerMain || [];
@@ -47,7 +48,10 @@ export const useConfigStore = defineStore("config", {
                     this.businessHours = {
                         weekdays: this.configuraciones["configuraciones"].horario_semana || '',
                         saturday: this.configuraciones["configuraciones"].horario_sabado || '',
-                        sunday: this.configuraciones["configuraciones"].horario_domingo || 'Cerrado'
+                        sunday: this.configuraciones["configuraciones"].horario_domingo || 'Cerrado',
+                        weekdays_corto: this.configuraciones["configuraciones"].horario_semana_corto || '',
+                        saturday_corto: this.configuraciones["configuraciones"].horario_sabado_corto || '',
+                        sunday_corto: this.configuraciones["configuraciones"].horario_domingo_corto || 'Cerrado'
                     };
                     
                     this.loaded = true;

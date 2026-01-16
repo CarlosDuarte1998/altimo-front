@@ -2,8 +2,9 @@
 import { UButton } from '#components';
 import { useContactStore, useConfigStore } from '#imports';
 
-const { corporateInfo, getKeywordsString, generateDescription, businessHours } = useALTIMOSEO();
+const { corporateInfo, getKeywordsString, generateDescription } = useALTIMOSEO();
 const configStore = useConfigStore();
+const { businessHours } = storeToRefs(configStore);
 
 // Usar información de contacto de la API o fallback al composable
 const contactInfo = computed(() => {
@@ -25,7 +26,10 @@ const hours = computed(() => {
         return {
             weekdays: configStore.getBusinessHours.weekdays || businessHours.weekdays,
             saturday: configStore.getBusinessHours.saturday || businessHours.saturday,
-            sunday: configStore.getBusinessHours.sunday || 'Cerrado'
+            sunday: configStore.getBusinessHours.sunday || 'Cerrado',
+            weekdays_corto: configStore.getBusinessHours.weekdays_corto || businessHours.weekdays_corto,
+            saturday_corto: configStore.getBusinessHours.saturday_corto || businessHours.saturday_corto,
+            sunday_corto: configStore.getBusinessHours.sunday_corto || 'Cerrado'
         };
     }
     return businessHours;
@@ -251,16 +255,16 @@ const handleSubmit = async () => {
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span class="font-medium">{{ hours.weekdays.split(':')[0] }}:</span>
-                                <span>{{ hours.weekdays.split(':').slice(1).join(':').trim() }}</span>
+                                <span>{{ hours.weekdays_corto }}</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="font-medium">{{ hours.saturday.split(':')[0] }}:</span>
-                                <span>{{ hours.saturday.split(':').slice(1).join(':').trim() }}</span>
+                                <span>{{ hours.saturday_corto }}</span>
                             </div>
-                            <div class="flex justify-between">
+                            <!-- <div class="flex justify-between">
                                 <span class="font-medium">Domingos:</span>
                                 <span>{{ hours.sunday || 'Cerrado' }}</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 

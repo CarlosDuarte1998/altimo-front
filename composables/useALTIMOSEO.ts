@@ -63,9 +63,9 @@ export const useALTIMOSEO = () => {
 
   // Horarios de atención
   const businessHours = {
-    weekdays: 'Lunes a Viernes: 7:00 a.m a 5:00 p.m',
-    saturday: 'Sábado: 7:00 a.m. a 1:00 p.m',
-    structured: ['Mo-Fr 07:00-17:00', 'Sa 07:00-12:00']
+    weekdays: 'Lunes a Sabado: 7:00 a.m a 10:00 p.m',
+    saturday: 'Domingo: 7:00 a.m. a 10:00 p.m',
+    structured: ['Mo-Sa 07:00-22:00', 'Su 07:00-22:00']
   };
 
   // Meta descripción base
