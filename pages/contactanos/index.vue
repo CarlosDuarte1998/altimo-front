@@ -254,11 +254,11 @@ const handleSubmit = async () => {
                         <h3 class="mb-4 text-xl font-medium">Horario de Atención</h3>
                         <div class="space-y-2">
                             <div class="flex justify-between">
-                                <span class="font-medium">{{ hours.weekdays.split(':')[0] }}:</span>
+                                <span class="font-medium">{{ hours.weekdays?.split(':')[0] || '' }}:</span>
                                 <span>{{ hours.weekdays_corto }}</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="font-medium">{{ hours.saturday.split(':')[0] }}:</span>
+                                <span class="font-medium">{{ hours.saturday?.split(':')[0] || '' }}:</span>
                                 <span>{{ hours.saturday_corto }}</span>
                             </div>
                             <!-- <div class="flex justify-between">
