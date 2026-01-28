@@ -211,123 +211,71 @@
         <div class="container px-4 md:px-6 max-w-[1300px] mx-auto">
             <div class="grid gap-12 md:grid-cols-2">
                 <div>
-                    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">Hospitalización Áltimo</h2>
+                    <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">{{hospitalizacionStore.titulo1}}</h2>
                     <div class="space-y-4 text-gray-600 text-lg">
-                        <p>Hemos creado nuestro servicio de hospitalización, diseñándolo para brindar comodidad, seguridad y atención constante. Cada habitación es un espacio privado, amplio y equipado para asegurar una experiencia de bienestar y confianza a nuestros pacientes y sus acompañantes.</p>
+                        <p>{{ hospitalizacionStore.descripcion1 }}</p>
                     </div>
                 </div>
-                <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
-                        width="500" height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover"
-                        src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/09/Edificio2-scaled-e1757734412469.jpg"
-                        style="color: transparent;"></div>
+                <div class="flex items-center justify-center">
+  <img :src="hospitalizacionStore.imagen" :alt="hospitalizacionStore.titulo1" loading="lazy" width="500" height="400" decoding="async"
+    class="rounded-lg object-cover" style="color: transparent;" />
+</div>
+                
             </div>
             <div class="col-span-12 mt-5">
                 <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
-                    Atención Especializada y Continua
+                    {{ hospitalizacionStore.titulo2 }}
                 </h2>
                 <div class="space-y-2 text-gray-600 text-lg">
-                    <p>
-                         Nuestros profesionales de la salud están disponibles las 24 horas para brindar acompañamiento cercano, realizar monitoreo constante y responder de manera oportuna ante cualquier cambio en el estado de salud del paciente.
-                         <br></br><br></br>
-                         Cuenta con estaciones de enfermería en el segundo y tercer nivel para apoyar el área de habitaciones y un sistema de comunicación que permite al paciente contacto permanente, garantizando seguridad, control y una atención verdaderamente personalizada.
-                    </p>
+                    <!-- <p>{{ hospitalizacionStore.getDescripcion2HTML }}</p> -->
+                    <div class="space-y-4 text-gray-600 text-lg">
+                        <div v-html="hospitalizacionStore.getDescripcion2HTML"></div>
+                    </div>
                 </div>
             </div>
 
             <div class="col-span-12 mt-10">
                 <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
-                   Excelencia Médica y Tecnología Avanzada
+                   {{ hospitalizacionStore.titulo3 }}
                 </h2>
                 <div class="space-y-2 text-gray-600 text-lg">
-                    <p>
-                         Contamos con médicos especialistas, protocolos clínicos seguros y tecnología de última generación que permiten tratamientos precisos y adecuados para cada patología. Nuestro liderazgo médico y el talento del personal se reflejan en una atención confiable, humana y eficiente.
-                    </p>
+                    <p>{{ hospitalizacionStore.descripcion3 }}</p>
                 </div>
             </div>
 
-            <!-- <div class="grid gap-12 md:grid-cols-2 mt-10">
-                <div class="flex items-center">
-                    <h2 class="mb-6 text-3xl font-bold tracking-tight text-[#213364] sm:text-3xl leading-relaxed">
-                        Nuestros quirófanos han sido certificados por el CSSP cumpliendo con protocolos de cirugía segura.
-                    </h2>
-                </div>
-                <div class="flex items-center justify-center"><img alt="Instalaciones de ALTIMO" loading="lazy"
-                        width="500" height="400" decoding="async" data-nimg="1" class="rounded-lg object-cover"
-                        src="https://admin-altimo.gunssoft.tech/wp-content/uploads/2025/10/Quirofanos1.jpg"
-                        style="color: transparent;"></div>
-            </div> -->
-
             <div class="col-span-12 mt-10">
     <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
-      Privacidad, Exclusividad y Confort
+      {{ hospitalizacionStore.titulo4 }}
     </h2>
     <div class="space-y-2 text-gray-600 text-lg">
-        <p>
-             Brindamos un ambiente exclusivo con total privacidad y discreción. Cada habitación está diseñada para asegurar que el paciente pueda vivir su proceso de recuperación en un espacio tranquilo, seguro y sin interrupciones, el ruido de cada habitación ha sido aislado con paredes especiales.
-             <br></br><br></br>
-             Controlamos cuidadosamente el acceso a las áreas de hospitalización y manejamos la información clínica con absoluta confidencialidad, garantizando que cada detalle de la estancia se mantenga en un entorno reservado y respetuoso.
-        </p>
+        <div class="space-y-4 text-gray-600 text-lg">
+            <div v-html="hospitalizacionStore.getDescripcion4HTML"></div>
+        </div>
     </div>
 </div>
 
 <div class="col-span-12 mt-10">
     <h2 class="mb-6 text-2xl font-bold tracking-tight text-[#213364] sm:text-3xl text-center">
-        ¿Qué incluye la hospitalización?
+        {{ hospitalizacionStore.titulo5 }}
     </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <!-- 1. Seguridad y comodidad básica -->
-        <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">Seguridad y comodidad básica</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li>✓ Cama hospitalaria</li>
-                <li>✓ Baño privado con agua caliente y barras de seguridad</li>
-                <li>✓ Sistema de detección de incendios</li>
-            </ul>
-        </div>
-
-        <!-- 2. Atención clínica personalizada -->
-        <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">Atención clínica personalizada</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li>✓ Alimentación personalizada supervisada por nutricionista</li>
-                <li>✓ Limpieza diaria</li>
-                <li>✓ Intercomunicador (comunicación directa con enfermería)</li>
-            </ul>
-        </div>
-
-        <!-- 3. Comodidad para el paciente y acompañante -->
-        <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">Comodidad para el paciente y acompañante</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li>✓ Aire acondicionado</li>
-                <li>✓ Sofá cama para acompañante</li>
-                <li>✓ Clóset privado</li>
-                <li>✓ Refrigeradora</li>
-                <li>✓ Televisión</li>
-                <li>✓ Wifi gratuito</li>
-            </ul>
-        </div>
-
-        <!-- 4. Servicios adicionales y experiencia premium -->
-        <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">Servicios adicionales y experiencia premium</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li>✓ Kit de bienvenida</li>
-                <li>✓ Servicio de lavandería</li>
-                <li>✓ Servicio de cafetería para acompañantes</li>
-            </ul>
-        </div>
-
-        <!-- 5. Organización y convivencia -->
-        <div>
-            <h3 class="text-xl font-semibold text-[#213364] mb-4">Organización y convivencia</h3>
-            <ul class="space-y-2 text-gray-700">
-                <li>✓ Control de visita según instrucciones del paciente</li>
-            </ul>
-        </div>
-
+    
+<!--LISTA DE QUE INCLUYE-->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+    <div v-for="(lista, index) in hospitalizacionStore.listas" :key="index" :class="[hospitalizacionStore.listas.length % 2 !== 0 &&
+        index === hospitalizacionStore.listas.length - 1 ? 'md:col-span-2' : '' ]">
+      <h3 class="text-xl font-semibold text-[#213364] mb-4">
+        {{ lista.titulo }}
+      </h3>
+      <ul class="space-y-2 text-gray-700">
+        <li v-for="(item, i) in lista.listas_li" :key="i" class="flex items-start gap-2">
+          <span class="text-gray-600 font-bold">✓</span>
+          <span>{{ item.titulo }}</span>
+        </li>
+      </ul>
     </div>
+  </div>
+
+    
 </div>
 
 
@@ -434,6 +382,7 @@
 <script setup>
 const route = useRoute()
 const categoriesStore = useCategoriesStore()
+// const hospitalizacionStore = useHospitalizacion()
 
 // Composable para perfiles
 const { getPerfiles } = usePerfiles()
@@ -607,6 +556,16 @@ useSeoMeta({
   ogImage: computed(() => currentCategory.value?.imagen_url || '/logo-horizontal.png'),
   twitterCard: 'summary_large_image'
 })
+
+
+//Consumo de store de hospitalización
+import { useHospitalizacion } from '~/stores/hospitalizacion';
+
+const hospitalizacionStore = useHospitalizacion();
+
+onMounted(async () => {
+  await hospitalizacionStore.fetchHospitalizacion();
+});
 </script>
 
 <style scoped>
