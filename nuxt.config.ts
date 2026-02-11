@@ -95,7 +95,7 @@ export default defineNuxtConfig({
   // Configuración de CSS crítico
   css: ['~/assets/css/main.css'],
   gtag: {
-    id: 'G-8M72GQMEBF'
+    ids: ['G-8M72GQMEBF','AW-17943272057']
   }
 
 
