@@ -41,7 +41,8 @@ export const useConfigStore = defineStore("config", {
                         phone: this.configuraciones["configuraciones"].telefono || '',
                         whatsapp: this.configuraciones["configuraciones"].whatsapp || '',
                         email: this.configuraciones["configuraciones"].email || '',
-                        website: this.configuraciones["configuraciones"].website || ''
+                        website: this.configuraciones["configuraciones"].website || '',
+                        whatsappCustom: this.configuraciones["configuraciones"].whatsapp || ''
                     };
                     
                     // Extraer horarios de atención

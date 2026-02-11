@@ -34,6 +34,16 @@ const hours = computed(() => {
 });
 
 const socialMediaLinks = computed(() => configStore.socialMedia);
+
+const whatsappCustom = computed(() => {
+  const originalWhatsapp = socialMediaLinks.value?.whatsapp;
+
+  if (!originalWhatsapp) return 'x';
+
+  const cleanNumber = originalWhatsapp.replace(/\D/g, '');
+
+  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent('Hola, quiero más información')}`;
+});
 </script>
 
 <template>
@@ -154,12 +164,12 @@ const socialMediaLinks = computed(() => configStore.socialMedia);
                         <!-- whatsapp -->
 
 
-                        <a class="text-white transition-colors hover:text-white" :href="socialMediaLinks.whatsapp"
-                            v-if="socialMediaLinks.whatsapp" target="_blank" rel="noopener noreferrer"
+                        <a class="text-white transition-colors hover:text-white" :href="whatsappCustom"
+                            v-if="whatsappCustom" target="_blank" rel="noopener noreferrer"
                             aria-label="Contactar a ÁLTIMO por WhatsApp">
                             <UIcon name="i-fa6-brands-whatsapp" class="size-5" aria-hidden="true" />
                         </a>
-
+                        
                        
                     </div>
 
